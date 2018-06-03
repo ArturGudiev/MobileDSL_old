@@ -5,12 +5,20 @@
 Generated material. Generating code in C#.
 
 <#
-  // When you change the DSL Definition, some of the code below may not work.
-
-  foreach (ExampleElement element in this.ExampleModel.Elements)
+  foreach (ShowForm element in this.MobileAppModel.ShowFormed)
   {
 #>
 	<#= element.Name #>
+
+	<#
+	  foreach (GraphicElement ge in element.GraphicElements)
+	  {
+	#>
+		<#= ge.Name #> ( <#= ge.GetType() #> )
+	<#    
+	  }
+	#>
+
 <#    
   }
 #>

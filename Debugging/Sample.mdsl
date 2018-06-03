@@ -1,11 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a63005c7-a386-48d7-b966-e0a8ad2f3204" xmlns="http://schemas.microsoft.com/dsltools/MobileDSL">
-  <elements>
-    <exampleElement Id="a8349b00-0643-4161-9629-0d8e3ffd2a70" name="ExampleElement1">
-      <targets>
-        <exampleElementMoniker name="/a63005c7-a386-48d7-b966-e0a8ad2f3204/ExampleElement2" />
-      </targets>
-    </exampleElement>
-    <exampleElement Id="56dc9ce9-8549-4af2-a9ef-5ad0b1bd9f9b" name="ExampleElement2" />
-  </elements>
-</exampleModel>
+<mobileAppModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1109d5cb-c545-49f0-b8f1-91f7c519d752" xmlns="http://schemas.microsoft.com/dsltools/MobileDSL">
+  <controllers>
+    <mobileAppModelHasControllers Id="c36fa7a2-303b-4a2c-aacf-088b74d5b638">
+      <controller Id="d6d2ea92-c9b3-4900-8876-f5158b54d1d7" name="C1" />
+    </mobileAppModelHasControllers>
+  </controllers>
+  <states>
+    <mobileAppModelHasStates Id="ef997ed9-bc78-494a-8542-cc0339aba000">
+      <state Id="81046f30-01fb-4b75-afa9-9122b57791a1" name="aaabbb" />
+    </mobileAppModelHasStates>
+  </states>
+  <showFormed>
+    <mobileAppModelHasShowFormed Id="7a0106f3-890e-45ea-9fdd-1388d647f07d">
+      <showForm Id="82ea1a8f-2d8d-424a-9909-5520cee49066" name="F1">
+        <graphicElements>
+          <showFormHasGraphicElements Id="bfeea8c7-d9a2-4ded-a3ba-8cb64417b195">
+            <input Id="65055698-d7c1-43f2-b6dc-6aefddec4b54" name="I1" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="7dc6dcbe-edad-4f48-8d23-0261d36ba9fd">
+            <label Id="9f21eb76-bb41-45b4-8d85-038394a0aece" name="L1" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
+    </mobileAppModelHasShowFormed>
+    <mobileAppModelHasShowFormed Id="0e060d9b-086d-4bbd-9b85-3c8153c97ed9">
+      <showForm Id="ff63ae4e-36fc-4644-82e3-0de08d41810e" name="F2">
+        <graphicElements>
+          <showFormHasGraphicElements Id="dff73cca-a98d-49f0-a02b-157cbbaece30">
+            <input Id="0cd1b6dd-0d45-4bd7-9c52-3bd93f7dd620" name="I2" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="e42225bf-4eea-4db5-84bc-d63f1372cbb5">
+            <label Id="8b3b5fdd-8533-4ef6-a5af-a8337b620dc5" name="L2" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
+    </mobileAppModelHasShowFormed>
+    <mobileAppModelHasShowFormed Id="8a5987ec-d34e-47cd-a14d-cfc119f92d63">
+      <showForm Id="103aa616-9b5e-4c23-8ca6-e270b0bbfe8e" />
+    </mobileAppModelHasShowFormed>
+  </showFormed>
+  <serviceInvoked>
+    <mobileAppModelHasServiceInvoked Id="510bf1cb-4589-4bd8-b660-00de69584842">
+      <serviceInvoke Id="21c8b701-5021-4002-ae6b-32e6b92a9d0e" name="ASd" />
+    </mobileAppModelHasServiceInvoked>
+  </serviceInvoked>
+  <serviceMsg>
+    <mobileAppModelHasServiceMsg Id="925a00bd-8722-42a9-852b-aa209921ffa5">
+      <serviceMsg Id="81c7a6a7-cf81-4088-b3af-8a63d466ea78" />
+    </mobileAppModelHasServiceMsg>
+    <mobileAppModelHasServiceMsg Id="ad1ea094-0e56-48b2-90a5-d04c11a02ccc">
+      <serviceMsg Id="3e50c1af-7c34-44a0-917f-6e2864448646" />
+    </mobileAppModelHasServiceMsg>
+    <mobileAppModelHasServiceMsg Id="ea09b3dc-62a3-4c55-b3fb-55ee2f9694fc">
+      <serviceMsg Id="0df7c243-be86-439e-a6dc-2c5b2012f291" />
+    </mobileAppModelHasServiceMsg>
+  </serviceMsg>
+  <appCoded>
+    <mobileAppModelHasAppCoded Id="acd0fdff-bb6c-4a93-a73c-bc2df53883af">
+      <appCode Id="56ef8039-b8dc-4b26-9b5b-6081fb39b3dc" name="Asd" text="asdasdsdasdasdasdasdsssssssssssssssssssssssssss" />
+    </mobileAppModelHasAppCoded>
+  </appCoded>
+</mobileAppModel>

@@ -1,3 +1,1059 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Placeholder for content that will be generated when the solution is built for the first time -->
-<root/>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Company.MobileDSL.MobileDSLDomainModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileDSL</value>
+    <comment>Description for DslLibrary &apos;MobileDSL&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileDSLDomainModel.DisplayName" xml:space="preserve">
+    <value>MobileDSL</value>
+    <comment>DisplayName for DslLibrary &apos;MobileDSL&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModel.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;MobileAppModel&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModel&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElement.Description" xml:space="preserve">
+    <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
+    <comment>Description for DomainClass &apos;ExampleElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElement.DisplayName" xml:space="preserve">
+    <value>Example Element</value>
+    <comment>DisplayName for DomainClass &apos;ExampleElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElement/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ExampleElement.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ExampleElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElement/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ExampleElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Controller.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.Controller</value>
+    <comment>Description for DomainClass &apos;Controller&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Controller.DisplayName" xml:space="preserve">
+    <value>Controller</value>
+    <comment>DisplayName for DomainClass &apos;Controller&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Controller/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.Controller.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Controller&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Controller/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Controller&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.State.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.State</value>
+    <comment>Description for DomainClass &apos;State&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.State.DisplayName" xml:space="preserve">
+    <value>State</value>
+    <comment>DisplayName for DomainClass &apos;State&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.State/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.State.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;State&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.State/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;State&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.DataLink.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.DataLink</value>
+    <comment>Description for DomainClass &apos;DataLink&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.DataLink.DisplayName" xml:space="preserve">
+    <value>Data Link</value>
+    <comment>DisplayName for DomainClass &apos;DataLink&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.DataLink/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.DataLink.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;DataLink&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.DataLink/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;DataLink&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowForm.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowForm</value>
+    <comment>Description for DomainClass &apos;ShowForm&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowForm.DisplayName" xml:space="preserve">
+    <value>Show Form</value>
+    <comment>DisplayName for DomainClass &apos;ShowForm&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowForm/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowForm.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ShowForm&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowForm/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ShowForm&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.GraphicElement.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.GraphicElement</value>
+    <comment>Description for DomainClass &apos;GraphicElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.GraphicElement.DisplayName" xml:space="preserve">
+    <value>Graphic Element</value>
+    <comment>DisplayName for DomainClass &apos;GraphicElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.GraphicElement/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.GraphicElement.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;GraphicElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.GraphicElement/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;GraphicElement&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Input.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.Input</value>
+    <comment>Description for DomainClass &apos;Input&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Input.DisplayName" xml:space="preserve">
+    <value>Input</value>
+    <comment>DisplayName for DomainClass &apos;Input&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Label.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.Label</value>
+    <comment>Description for DomainClass &apos;Label&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.Label.DisplayName" xml:space="preserve">
+    <value>Label</value>
+    <comment>DisplayName for DomainClass &apos;Label&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceInvoke.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ServiceInvoke</value>
+    <comment>Description for DomainClass &apos;ServiceInvoke&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceInvoke.DisplayName" xml:space="preserve">
+    <value>Service Invoke</value>
+    <comment>DisplayName for DomainClass &apos;ServiceInvoke&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceInvoke/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ServiceInvoke.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceInvoke&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceInvoke/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceInvoke&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceMsg.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ServiceMsg</value>
+    <comment>Description for DomainClass &apos;ServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceMsg.DisplayName" xml:space="preserve">
+    <value>Service Msg</value>
+    <comment>DisplayName for DomainClass &apos;ServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceMsg/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ServiceMsg.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceMsg/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCode.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.AppCode</value>
+    <comment>Description for DomainClass &apos;AppCode&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCode.DisplayName" xml:space="preserve">
+    <value>App Code</value>
+    <comment>DisplayName for DomainClass &apos;AppCode&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCode/Name.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.AppCode.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AppCode&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCode/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AppCode&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCode/Text.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.AppCode.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;AppCode&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCode/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;AppCode&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements.Description" xml:space="preserve">
+    <value>Embedding relationship between the Model and Elements</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements/MobileAppModel.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements/Element.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasElements/Element.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;MobileAppModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets.Description" xml:space="preserve">
+    <value>Reference relationship between Elements.</value>
+    <comment>Description for DomainClass &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets.DisplayName" xml:space="preserve">
+    <value>Example Element References Targets</value>
+    <comment>DisplayName for DomainClass &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets/Source.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ExampleRelationship.Target</value>
+    <comment>Description for DomainRole &apos;Source&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets/Source.DisplayName" xml:space="preserve">
+    <value>Source</value>
+    <comment>DisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets/Source.PropertyDisplayName" xml:space="preserve">
+    <value>Targets</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Source&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets/Target.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ExampleRelationship.Source</value>
+    <comment>Description for DomainRole &apos;Target&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets/Target.DisplayName" xml:space="preserve">
+    <value>Target</value>
+    <comment>DisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleElementReferencesTargets/Target.PropertyDisplayName" xml:space="preserve">
+    <value>Sources</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Target&apos; on DomainRelationship &apos;ExampleElementReferencesTargets&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasControllers</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has Controllers</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasControllers.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>Controllers</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers/Controller.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasControllers.Controller</value>
+    <comment>Description for DomainRole &apos;Controller&apos; on DomainRelationship &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers/Controller.DisplayName" xml:space="preserve">
+    <value>Controller</value>
+    <comment>DisplayName for DomainRole &apos;Controller&apos; on DomainRelationship &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasControllers/Controller.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Controller&apos; on DomainRelationship &apos;MobileAppModelHasControllers&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasStates</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has States</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasStates.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>States</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates/State.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasStates.State</value>
+    <comment>Description for DomainRole &apos;State&apos; on DomainRelationship &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates/State.DisplayName" xml:space="preserve">
+    <value>State</value>
+    <comment>DisplayName for DomainRole &apos;State&apos; on DomainRelationship &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasStates/State.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;State&apos; on DomainRelationship &apos;MobileAppModelHasStates&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasDataLinked</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has Data Linked</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasDataLinked.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>Data Linked</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked/DataLink.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasDataLinked.DataLink</value>
+    <comment>Description for DomainRole &apos;DataLink&apos; on DomainRelationship &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked/DataLink.DisplayName" xml:space="preserve">
+    <value>Data Link</value>
+    <comment>DisplayName for DomainRole &apos;DataLink&apos; on DomainRelationship &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasDataLinked/DataLink.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DataLink&apos; on DomainRelationship &apos;MobileAppModelHasDataLinked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasShowFormed</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has Show Formed</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasShowFormed.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>Show Formed</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed/ShowForm.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasShowFormed.ShowForm</value>
+    <comment>Description for DomainRole &apos;ShowForm&apos; on DomainRelationship &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed/ShowForm.DisplayName" xml:space="preserve">
+    <value>Show Form</value>
+    <comment>DisplayName for DomainRole &apos;ShowForm&apos; on DomainRelationship &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasShowFormed/ShowForm.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ShowForm&apos; on DomainRelationship &apos;MobileAppModelHasShowFormed&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowFormHasGraphicElements</value>
+    <comment>Description for DomainClass &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements.DisplayName" xml:space="preserve">
+    <value>Show Form Has Graphic Elements</value>
+    <comment>DisplayName for DomainClass &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements/ShowForm.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowFormHasGraphicElements.ShowForm</value>
+    <comment>Description for DomainRole &apos;ShowForm&apos; on DomainRelationship &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements/ShowForm.DisplayName" xml:space="preserve">
+    <value>Show Form</value>
+    <comment>DisplayName for DomainRole &apos;ShowForm&apos; on DomainRelationship &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements/ShowForm.PropertyDisplayName" xml:space="preserve">
+    <value>Graphic Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ShowForm&apos; on DomainRelationship &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements/GraphicElement.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowFormHasGraphicElements.GraphicElement</value>
+    <comment>Description for DomainRole &apos;GraphicElement&apos; on DomainRelationship &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements/GraphicElement.DisplayName" xml:space="preserve">
+    <value>Graphic Element</value>
+    <comment>DisplayName for DomainRole &apos;GraphicElement&apos; on DomainRelationship &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormHasGraphicElements/GraphicElement.PropertyDisplayName" xml:space="preserve">
+    <value>Show Form</value>
+    <comment>PropertyDisplayName for DomainRole &apos;GraphicElement&apos; on DomainRelationship &apos;ShowFormHasGraphicElements&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasServiceInvoked</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has Service Invoked</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasServiceInvoked.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>Service Invoked</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked/ServiceInvoke.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasServiceInvoked.ServiceInvoke</value>
+    <comment>Description for DomainRole &apos;ServiceInvoke&apos; on DomainRelationship &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked/ServiceInvoke.DisplayName" xml:space="preserve">
+    <value>Service Invoke</value>
+    <comment>DisplayName for DomainRole &apos;ServiceInvoke&apos; on DomainRelationship &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceInvoked/ServiceInvoke.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceInvoke&apos; on DomainRelationship &apos;MobileAppModelHasServiceInvoked&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasServiceMsg</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has Service Msg</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasServiceMsg.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>Service Msg</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg/ServiceMsg.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasServiceMsg.ServiceMsg</value>
+    <comment>Description for DomainRole &apos;ServiceMsg&apos; on DomainRelationship &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg/ServiceMsg.DisplayName" xml:space="preserve">
+    <value>Service Msg</value>
+    <comment>DisplayName for DomainRole &apos;ServiceMsg&apos; on DomainRelationship &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasServiceMsg/ServiceMsg.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ServiceMsg&apos; on DomainRelationship &apos;MobileAppModelHasServiceMsg&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasAppCoded</value>
+    <comment>Description for DomainClass &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded.DisplayName" xml:space="preserve">
+    <value>Mobile App Model Has App Coded</value>
+    <comment>DisplayName for DomainClass &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded/MobileAppModel.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasAppCoded.MobileAppModel</value>
+    <comment>Description for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded/MobileAppModel.DisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>DisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded/MobileAppModel.PropertyDisplayName" xml:space="preserve">
+    <value>App Coded</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MobileAppModel&apos; on DomainRelationship &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded/AppCode.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileAppModelHasAppCoded.AppCode</value>
+    <comment>Description for DomainRole &apos;AppCode&apos; on DomainRelationship &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded/AppCode.DisplayName" xml:space="preserve">
+    <value>App Code</value>
+    <comment>DisplayName for DomainRole &apos;AppCode&apos; on DomainRelationship &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileAppModelHasAppCoded/AppCode.PropertyDisplayName" xml:space="preserve">
+    <value>Mobile App Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AppCode&apos; on DomainRelationship &apos;MobileAppModelHasAppCoded&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleShape.Description" xml:space="preserve">
+    <value>Shape used to represent ExampleElements on a Diagram.</value>
+    <comment>Description for DomainClass &apos;ExampleShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleShape.DisplayName" xml:space="preserve">
+    <value>Example Shape</value>
+    <comment>DisplayName for DomainClass &apos;ExampleShape&apos;</comment>
+  </data>
+  <data name="ExampleShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.ControllerShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ControllerShape</value>
+    <comment>Description for DomainClass &apos;ControllerShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ControllerShape.DisplayName" xml:space="preserve">
+    <value>Controller Shape</value>
+    <comment>DisplayName for DomainClass &apos;ControllerShape&apos;</comment>
+  </data>
+  <data name="ControllerShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.StateShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.StateShape</value>
+    <comment>Description for DomainClass &apos;StateShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.StateShape.DisplayName" xml:space="preserve">
+    <value>State Shape</value>
+    <comment>DisplayName for DomainClass &apos;StateShape&apos;</comment>
+  </data>
+  <data name="StateShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.DataLinkShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.DataLinkShape</value>
+    <comment>Description for DomainClass &apos;DataLinkShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.DataLinkShape.DisplayName" xml:space="preserve">
+    <value>Data Link Shape</value>
+    <comment>DisplayName for DomainClass &apos;DataLinkShape&apos;</comment>
+  </data>
+  <data name="DataLinkShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowFormShape</value>
+    <comment>Description for DomainClass &apos;ShowFormShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormShape.DisplayName" xml:space="preserve">
+    <value>Show Form Shape</value>
+    <comment>DisplayName for DomainClass &apos;ShowFormShape&apos;</comment>
+  </data>
+  <data name="ShowFormShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.GraphicElementShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.GraphicElementShape</value>
+    <comment>Description for DomainClass &apos;GraphicElementShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.GraphicElementShape.DisplayName" xml:space="preserve">
+    <value>Graphic Element Shape</value>
+    <comment>DisplayName for DomainClass &apos;GraphicElementShape&apos;</comment>
+  </data>
+  <data name="GraphicElementShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.InputShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.InputShape</value>
+    <comment>Description for DomainClass &apos;InputShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.InputShape.DisplayName" xml:space="preserve">
+    <value>Input Shape</value>
+    <comment>DisplayName for DomainClass &apos;InputShape&apos;</comment>
+  </data>
+  <data name="InputShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.LabelShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.LabelShape</value>
+    <comment>Description for DomainClass &apos;LabelShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.LabelShape.DisplayName" xml:space="preserve">
+    <value>Label Shape</value>
+    <comment>DisplayName for DomainClass &apos;LabelShape&apos;</comment>
+  </data>
+  <data name="LabelShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceInvokeShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ServiceInvokeShape</value>
+    <comment>Description for DomainClass &apos;ServiceInvokeShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceInvokeShape.DisplayName" xml:space="preserve">
+    <value>Service Invoke Shape</value>
+    <comment>DisplayName for DomainClass &apos;ServiceInvokeShape&apos;</comment>
+  </data>
+  <data name="ServiceInvokeShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceMsgShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ServiceMsgShape</value>
+    <comment>Description for DomainClass &apos;ServiceMsgShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ServiceMsgShape.DisplayName" xml:space="preserve">
+    <value>Service Msg Shape</value>
+    <comment>DisplayName for DomainClass &apos;ServiceMsgShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormCompartmentShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.ShowFormCompartmentShape</value>
+    <comment>Description for DomainClass &apos;ShowFormCompartmentShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ShowFormCompartmentShape.DisplayName" xml:space="preserve">
+    <value>Show Form Compartment Shape</value>
+    <comment>DisplayName for DomainClass &apos;ShowFormCompartmentShape&apos;</comment>
+  </data>
+  <data name="ShowFormCompartmentShapeNameCompartmentTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ShowFormCompartmentShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCodeShape.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.AppCodeShape</value>
+    <comment>Description for DomainClass &apos;AppCodeShape&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.AppCodeShape.DisplayName" xml:space="preserve">
+    <value>App Code Shape</value>
+    <comment>DisplayName for DomainClass &apos;AppCodeShape&apos;</comment>
+  </data>
+  <data name="AppCodeShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="AppCodeShapeTextDecoratorDefaultText" xml:space="preserve">
+    <value>TextDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleConnector.Description" xml:space="preserve">
+    <value>Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram.</value>
+    <comment>Description for DomainClass &apos;ExampleConnector&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.ExampleConnector.DisplayName" xml:space="preserve">
+    <value>Example Connector</value>
+    <comment>DisplayName for DomainClass &apos;ExampleConnector&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>MobileDSL (*.mdsl)|*.mdsl</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>MobileDSL Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileDSLDiagram.Description" xml:space="preserve">
+    <value>Description for Company.MobileDSL.MobileDSLDiagram</value>
+    <comment>Description for DomainClass &apos;MobileDSLDiagram&apos;</comment>
+  </data>
+  <data name="Company.MobileDSL.MobileDSLDiagram.DisplayName" xml:space="preserve">
+    <value>Minimal Language Diagram</value>
+    <comment>DisplayName for DomainClass &apos;MobileDSLDiagram&apos;</comment>
+  </data>
+  <data name="MobileDSLToolboxTab" xml:space="preserve">
+    <value>MobileDSL</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="ExampleElementToolboxItem" xml:space="preserve">
+    <value>ExampleElement</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ExampleElementToolboxTooltip" xml:space="preserve">
+    <value>Create an ExampleElement</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ExampleRelationshipToolboxItem" xml:space="preserve">
+    <value>ExampleRelationship</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ExampleRelationshipToolboxTooltip" xml:space="preserve">
+    <value>Drag between ExampleElements to create an ExampleRelationship</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ControllerToolboxItem" xml:space="preserve">
+    <value>Controller</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ControllerToolboxTooltip" xml:space="preserve">
+    <value>Controller</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="StateToolboxItem" xml:space="preserve">
+    <value>State</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="StateToolboxTooltip" xml:space="preserve">
+    <value>State</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="DataLinkToolboxItem" xml:space="preserve">
+    <value>DataLink</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="DataLinkToolboxTooltip" xml:space="preserve">
+    <value>Data Link</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ShowFormToolboxItem" xml:space="preserve">
+    <value>ShowForm</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ShowFormToolboxTooltip" xml:space="preserve">
+    <value>Show Form</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="InputToolboxItem" xml:space="preserve">
+    <value>Input</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="InputToolboxTooltip" xml:space="preserve">
+    <value>Input</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="LabelToolboxItem" xml:space="preserve">
+    <value>Label</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="LabelToolboxTooltip" xml:space="preserve">
+    <value>Label</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ServiceInvokeToolboxItem" xml:space="preserve">
+    <value>ServiceInvoke</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ServiceInvokeToolboxTooltip" xml:space="preserve">
+    <value>Service Invoke</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ServiceMsgToolboxItem" xml:space="preserve">
+    <value>ServiceMsg</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ServiceMsgToolboxTooltip" xml:space="preserve">
+    <value>Service Msg</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AppCodeToolboxItem" xml:space="preserve">
+    <value>AppCode</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AppCodeToolboxTooltip" xml:space="preserve">
+    <value>App Code</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ExampleElementToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ExampleRelationshipToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleconnectortoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ControllerToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="StateToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="DataLinkToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ShowFormToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="InputToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="LabelToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceInvokeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ServiceMsgToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AppCodeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\resources\exampleshapetoolbitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

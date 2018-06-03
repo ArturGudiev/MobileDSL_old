@@ -1,5 +1,13 @@
 ﻿
 Generated material. Generating code in C#.
 
-	ExampleElement1
-	ExampleElement2
+	F1
+
+			I1 ( Company.MobileDSL.Input )
+			L1 ( Company.MobileDSL.Label )
+	
+	F2
+
+			I2 ( Company.MobileDSL.Input )
+			L2 ( Company.MobileDSL.Label )
+	
