@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mobileDSLDiagram dslVersion="1.0.0.0" Id="006787c0-aa5f-4aa5-b131-013141bca0a3" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="a63005c7-a386-48d7-b966-e0a8ad2f3204" />
+  <nestedChildShapes>
+    <exampleShape Id="495e2149-8309-44e0-91c0-e47515bbf8bb" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/a63005c7-a386-48d7-b966-e0a8ad2f3204/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="92109df7-ab01-4e9c-b8c0-becaf608ba36" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/a63005c7-a386-48d7-b966-e0a8ad2f3204/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="ed71000d-cec7-401e-bafd-e8b3026a86f7" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="f9e3a406-a3af-4230-97e1-4a697785b1ea">
+      <nodes>
+        <exampleShapeMoniker Id="495e2149-8309-44e0-91c0-e47515bbf8bb" />
+        <exampleShapeMoniker Id="92109df7-ab01-4e9c-b8c0-becaf608ba36" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</mobileDSLDiagram>
