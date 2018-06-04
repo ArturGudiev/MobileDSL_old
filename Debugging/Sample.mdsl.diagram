@@ -1,48 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<mobileDSLDiagram dslVersion="1.0.0.0" Id="006787c0-aa5f-4aa5-b131-013141bca0a3" absoluteBounds="0, 0, 13.75, 8.5" name="Sample">
+<mobileDSLDiagram dslVersion="1.0.0.0" Id="006787c0-aa5f-4aa5-b131-013141bca0a3" absoluteBounds="0, 0, 11.875, 8.5" name="Sample">
   <mobileAppModelMoniker Id="1109d5cb-c545-49f0-b8f1-91f7c519d752" />
   <nestedChildShapes>
-    <controllerShape Id="cda5fa11-387b-4b09-874e-90f55adce9c4" absoluteBounds="2.5, 0.5, 1.5, 1">
-      <controllerMoniker Id="d6d2ea92-c9b3-4900-8876-f5158b54d1d7" />
-    </controllerShape>
-    <stateShape Id="25b7b971-d05d-4f0d-815e-1c92731268f1" absoluteBounds="0.5, 3.5, 1.5, 1">
-      <stateMoniker Id="81046f30-01fb-4b75-afa9-9122b57791a1" />
+    <stateShape Id="10aed77e-ec4d-466a-bf5d-f720b7641525" absoluteBounds="1.375, 1.125, 3.5, 3.375">
+      <stateMoniker Id="1316da41-80cb-4f31-9d7d-f3d470215b8e" />
     </stateShape>
-    <showFormCompartmentShape Id="1b49c7a4-3266-4367-89f6-7bb8119b0eb8" absoluteBounds="7.5, 0.875, 1.5, 1.3593896484374999">
-      <showFormMoniker Id="82ea1a8f-2d8d-424a-9909-5520cee49066" />
+    <stateShape Id="2ab7e512-fb1c-46db-b48b-a9fa75dcd400" absoluteBounds="7.375, 1.25, 4.25, 3">
+      <stateMoniker Id="885be612-0ba8-4bb7-a031-453e3052497b" />
+    </stateShape>
+    <showFormCompartmentShape Id="511be494-6308-423e-bb75-09484f25d330" absoluteBounds="1.875, 3, 1.5, 1.3593896484374994">
+      <showFormMoniker Id="36468712-ce32-47da-8764-cc4e633620c6" />
       <nestedChildShapes>
-        <elementListCompartment Id="d3eae5af-6c44-46c5-9c41-d7e2b30dc01c" isExpanded="false" absoluteBounds="7.515, 1.885, 1.4700000000000002, 0.2493896484375" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="137ef461-86d1-4bd6-9310-68fdfe094a00" absoluteBounds="1.89, 4.01, 1.4700000000000002, 0.2493896484375" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </showFormCompartmentShape>
-    <inputShape Id="9e723634-17fd-4f5f-ba31-695f7168dc5d" absoluteBounds="12, 3.5, 1.5, 1">
-      <inputMoniker Id="65055698-d7c1-43f2-b6dc-6aefddec4b54" />
-    </inputShape>
-    <labelShape Id="54be2422-c5ff-4253-8552-33192aca7403" absoluteBounds="2.5, 2, 1.5, 1">
-      <labelMoniker Id="9f21eb76-bb41-45b4-8d85-038394a0aece" />
-    </labelShape>
-    <showFormCompartmentShape Id="b38154ed-a5af-453f-b4db-6087c2b08482" absoluteBounds="9.625, 0.875, 1.5, 1.3593896484374999">
-      <showFormMoniker Id="ff63ae4e-36fc-4644-82e3-0de08d41810e" />
-      <nestedChildShapes>
-        <elementListCompartment Id="e9abb258-4417-424e-a4ed-ec01bac7ac8d" isExpanded="false" absoluteBounds="9.64, 1.885, 1.4700000000000002, 0.2493896484375" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </showFormCompartmentShape>
-    <inputShape Id="3cd7d78d-f184-4a95-9470-eb8175249424" absoluteBounds="12, 2.375, 1.5, 1">
-      <inputMoniker Id="0cd1b6dd-0d45-4bd7-9c52-3bd93f7dd620" />
-    </inputShape>
-    <labelShape Id="8f5fcf71-ead7-4bdb-b8ec-3a09496e6108" absoluteBounds="2.5, 5, 1.5, 1">
-      <labelMoniker Id="8b3b5fdd-8533-4ef6-a5af-a8337b620dc5" />
-    </labelShape>
-    <showFormCompartmentShape Id="7e76bb71-d28f-4cf3-9476-a041096f7201" absoluteBounds="4.5, 0.5, 1.5, 1.3593896484375">
-      <showFormMoniker Id="103aa616-9b5e-4c23-8ca6-e270b0bbfe8e" />
-      <nestedChildShapes>
-        <elementListCompartment Id="9bb5fd1b-2092-454a-968e-13cf135a1e6e" absoluteBounds="4.515, 1.51, 1.4700000000000002, 0.2493896484375" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </showFormCompartmentShape>
-    <serviceInvokeShape Id="3d366925-1014-4d82-87bb-6dd84961bd5a" absoluteBounds="0.5, 5, 1.5, 1">
-      <serviceInvokeMoniker Id="21c8b701-5021-4002-ae6b-32e6b92a9d0e" />
-    </serviceInvokeShape>
-    <compartmentShape1 Id="46fc1e76-e6d0-488b-8fea-44c2be96af67" absoluteBounds="8.375, 4.625, 1.5, 1">
-      <appCodeMoniker Id="56ef8039-b8dc-4b26-9b5b-6081fb39b3dc" />
-    </compartmentShape1>
   </nestedChildShapes>
 </mobileDSLDiagram>

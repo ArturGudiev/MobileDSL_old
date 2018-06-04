@@ -23997,11 +23997,11 @@ namespace Company.MobileDSL
 					// model elements.
 					while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 					{
-                        try {
+                        try
+                        {
                             base.ReadElements(serializationContext, element, reader);
-                        }
-                        catch (System.Exception e) { }
-                        if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+                        } catch (System.Exception e) { }
+						if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 						{
 							// Encountered one unknown XML element, skip it and keep reading.
 							MobileDSLSerializationBehaviorSerializationMessages.UnexpectedXmlElement(serializationContext, reader);

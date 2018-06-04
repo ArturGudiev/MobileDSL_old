@@ -1,13 +1,6 @@
 ﻿
 Generated material. Generating code in C#.
 
-	F1
+	Form1
 
-			I1 ( Company.MobileDSL.Input )
-			L1 ( Company.MobileDSL.Label )
-	
-	F2
-
-			I2 ( Company.MobileDSL.Input )
-			L2 ( Company.MobileDSL.Label )
 	

@@ -462,11 +462,11 @@ namespace Company.MobileDSL
 								}
 
                                 // Load any additional domain models that are required
-                                try
-                                {
+                                try {
                                     DslModeling::SerializationUtilities.ResolveDomainModels(reader, serializerLocator, partition.Store);
-                                } catch (System.Exception e) { }
-								
+                                }
+                                catch (System.Exception e) { }
+                                
 								reader.MoveToContent();
 									
 								modelRoot = modelRootSerializer.TryCreateInstance(serializationContext, reader, partition) as MobileAppModel;
