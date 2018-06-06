@@ -2,15 +2,60 @@
 <mobileAppModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1109d5cb-c545-49f0-b8f1-91f7c519d752" xmlns="http://schemas.microsoft.com/dsltools/MobileDSL">
   <states>
     <mobileAppModelHasStates Id="31efb11b-5f10-45a6-a90f-40857be625ca">
-      <state Id="1316da41-80cb-4f31-9d7d-f3d470215b8e" name="State1" />
+      <state Id="1316da41-80cb-4f31-9d7d-f3d470215b8e" name="State1">
+        <showForm>
+          <stateReferencesShowForm Id="3a695807-2d67-4171-b826-6df4f8503e27">
+            <showFormMoniker Id="23c06aa9-e58b-43a2-8bfa-c932a2a6e8f9" />
+          </stateReferencesShowForm>
+        </showForm>
+      </state>
     </mobileAppModelHasStates>
     <mobileAppModelHasStates Id="674bc840-d7f7-45a9-871a-2a14a11f6bf9">
-      <state Id="885be612-0ba8-4bb7-a031-453e3052497b" name="State2" />
+      <state Id="885be612-0ba8-4bb7-a031-453e3052497b" name="State2">
+        <showForm>
+          <stateReferencesShowForm Id="af7e0eee-4c50-4bbd-b0a9-532fc7ad634d">
+            <showFormMoniker Id="c45149e8-d887-462c-b3e0-69f151f33431" />
+          </stateReferencesShowForm>
+        </showForm>
+      </state>
     </mobileAppModelHasStates>
   </states>
   <showFormed>
-    <mobileAppModelHasShowFormed Id="652a5d6c-527c-474e-b661-b9a080a9e67c">
-      <showForm Id="36468712-ce32-47da-8764-cc4e633620c6" name="Form1" />
+    <mobileAppModelHasShowFormed Id="4f8c8e38-e77d-4aca-9e96-b16fb73d898e">
+      <showForm Id="c45149e8-d887-462c-b3e0-69f151f33431" name="Form2">
+        <graphicElements>
+          <showFormHasGraphicElements Id="f9c0ad7d-b743-4b9d-ab1d-3ed093e86adb">
+            <label Id="261eeb15-563f-4594-ae22-ac6a79fec3bf" name="Title" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="529b10e5-79d6-48a4-bddf-97c386004d37">
+            <button Id="605d65d7-f157-4eb6-bc7f-8cc5eae5c6f8" name="BackButton" text="Back" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="d02c88b0-2a82-417f-9232-1f658260725e">
+            <listBox Id="2486d23b-9480-4668-b2d2-a01546443563" name="ListBox" items="9:00=9:40=10:20" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
+    </mobileAppModelHasShowFormed>
+    <mobileAppModelHasShowFormed Id="8c5d5867-165c-4899-8e36-5ed94b0f2193">
+      <showForm Id="23c06aa9-e58b-43a2-8bfa-c932a2a6e8f9" name="Form1">
+        <graphicElements>
+          <showFormHasGraphicElements Id="2885b57b-b8a6-4ef3-be04-a86bd699f43b">
+            <label Id="bea127dd-c9cb-4064-b9b9-bfaeec25e62b" name="FromLabel" text="Откуда" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="59476496-f4ae-44e7-a448-8a3b3a494690">
+            <label Id="b11526b4-1dab-48ca-aa52-0c88bc71a6f3" name="ToLabel" text="Куда" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="858872d0-a6ba-46fd-b0da-a5b288b1b873">
+            <button Id="1079bdcf-9662-4b26-a098-786b2b45a7a2" name="showButton" text="Показать расписание" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="6f5c9555-d07a-4c90-b5e3-e09adc3e12fc">
+            <dropBox Id="097068d5-cc28-483d-a218-00b05bba04b8" name="DropBox1" items="Мартышкино=Университет=Старый Петергоф=Новый Петергоф=Стрельна=Сергиево=Сосновая Полняна=Лигово=Ульянка=Дачное=Ленинский Проспект=Санкт-Петербург" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="011e036c-eabc-4fe7-a82b-229e805cf248">
+            <dropBox Id="5a4dbf51-5882-44e9-8b0b-76a50b063ff8" name="DropBox2" items="Мартышкино=Университет=Старый Петергоф=Новый Петергоф=Стрельна=Сергиево=Сосновая Полняна=Лигово=Ульянка=Дачное=Ленинский Проспект=Санкт-Петербург" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
     </mobileAppModelHasShowFormed>
   </showFormed>
   <serviceMsg>

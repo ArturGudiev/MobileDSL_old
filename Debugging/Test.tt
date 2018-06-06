@@ -1,0 +1,53 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".txt" #>
+<#@ MobileDSL processor="MobileDSLDirectiveProcessor" requires="fileName='Volunteer.mdsl'" #>
+
+
+<#
+    foreach (Controller controller in this.MobileAppModel.Controllers)
+{#>
+//===============================
+
+<#getPrimitivesFromController(controller);#>
+
+<#}#>
+
+
+
+<#+  
+private void getPrimitivesFromController(Controller controller)  
+{  
+	foreach (State state in controller.States)
+        {#>
+<#+getPrimitivesFromForm(state.ShowForm);#>
+<#+}}#>
+
+<#+  
+private void getPrimitivesFromForm(ShowForm form)  
+{  
+	foreach (GraphicElement element in form.GraphicElements){#>
+<#+typeOf(element);#> <#= element.Name #>;
+<#+}}#>
+
+<#+  
+private void typeOf(GraphicElement element)  
+{  #>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Button)) {#>Button<#+}#>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Label)) {#>Label<#+}#>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {#>Input<#+}#>
+<#+}#>
+
+
+
+<#+  
+private void getMainController()  
+{  
+	foreach (Controller controller in this.MobileAppModel.Controllers)
+        {
+            if(controller.isStartController){ #>
+<#= controller.Name #>.getInstance(this);
+<#+                // <<< Notice that this is also a class feature block.  
+            }
+            }
+    }  
+#>

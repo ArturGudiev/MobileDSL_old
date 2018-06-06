@@ -1,0 +1,21 @@
+﻿
+
+//===============================
+
+Input VolunteerIdInput;
+Label PasswordLabel;
+Label VolunteerIdLabel;
+Input PasswordInput;
+Button loginButton;
+
+//===============================
+
+Button checkinButton;
+Button LogoutButton;
+Label generatedKeyLabel;
+Label KeyLabel;
+Button BackButton;
+
+
+
+

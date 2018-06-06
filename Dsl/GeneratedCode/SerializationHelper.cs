@@ -460,13 +460,10 @@ namespace Company.MobileDSL
 								{
 									serializationResult.Encoding = encoding;
 								}
-
-                                // Load any additional domain models that are required
-                                try {
-                                    DslModeling::SerializationUtilities.ResolveDomainModels(reader, serializerLocator, partition.Store);
-                                }
-                                catch (System.Exception e) { }
-                                
+	
+								// Load any additional domain models that are required
+								DslModeling::SerializationUtilities.ResolveDomainModels(reader, serializerLocator, partition.Store);
+								
 								reader.MoveToContent();
 									
 								modelRoot = modelRootSerializer.TryCreateInstance(serializationContext, reader, partition) as MobileAppModel;

@@ -48,17 +48,17 @@ namespace Company.MobileDSL
 		{
 		}
 		#endregion
-		#region Elements opposite domain role accessor
+		#region Services opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Elements.
+		/// Gets a list of Services.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ExampleElement> Elements
+		public virtual DslModeling::LinkedElementCollection<Service> Services
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(global::Company.MobileDSL.MobileAppModelHasElements.MobileAppModelDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Service>, Service>(global::Company.MobileDSL.MobileAppModelHasServices.MobileAppModelDomainRoleId);
 			}
 		}
 		#endregion
@@ -187,7 +187,7 @@ namespace Company.MobileDSL
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Company.MobileDSL.ExampleElement.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Company.MobileDSL.Service.DomainClassId)) 
 				{
 					return true;
 				}
@@ -251,11 +251,11 @@ namespace Company.MobileDSL
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Company.MobileDSL.ExampleElement sourceExampleElement1 = sourceElement as global::Company.MobileDSL.ExampleElement;
-			if (sourceExampleElement1 != null)
+			global::Company.MobileDSL.Service sourceService1 = sourceElement as global::Company.MobileDSL.Service;
+			if (sourceService1 != null)
 			{
-				// Create link for path MobileAppModelHasElements.Elements
-				this.Elements.Add(sourceExampleElement1);
+				// Create link for path MobileAppModelHasServices.Services
+				this.Services.Add(sourceService1);
 
 				return;
 			}
@@ -345,15 +345,15 @@ namespace Company.MobileDSL
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Company.MobileDSL.ExampleElement sourceExampleElement1 = sourceElement as global::Company.MobileDSL.ExampleElement;
-			if (sourceExampleElement1 != null)
+			global::Company.MobileDSL.Service sourceService1 = sourceElement as global::Company.MobileDSL.Service;
+			if (sourceService1 != null)
 			{
-				// Delete link for path MobileAppModelHasElements.Elements
+				// Delete link for path MobileAppModelHasServices.Services
 				
-				foreach (DslModeling::ElementLink link in global::Company.MobileDSL.MobileAppModelHasElements.GetLinks((global::Company.MobileDSL.MobileAppModel)this, sourceExampleElement1))
+				foreach (DslModeling::ElementLink link in global::Company.MobileDSL.MobileAppModelHasServices.GetLinks((global::Company.MobileDSL.MobileAppModel)this, sourceService1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.MobileDSL.MobileAppModelHasElements.MobileAppModelDomainRoleId, global::Company.MobileDSL.MobileAppModelHasElements.ElementDomainRoleId);
+					link.Delete(global::Company.MobileDSL.MobileAppModelHasServices.MobileAppModelDomainRoleId, global::Company.MobileDSL.MobileAppModelHasServices.ElementDomainRoleId);
 				}
 
 				return;
@@ -465,21 +465,21 @@ namespace Company.MobileDSL
 namespace Company.MobileDSL
 {
 	/// <summary>
-	/// DomainClass ExampleElement
+	/// DomainClass Service
 	/// Elements embedded in the model. Appear as boxes on the diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MobileDSL.ExampleElement.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MobileDSL.ExampleElement.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MobileDSL.Service.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MobileDSL.Service.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MobileDSL.MobileDSLDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("24892a57-2af7-4c79-a1db-3952728dc95a")]
-	public partial class ExampleElement : DslModeling::ModelElement
+	public partial class Service : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ExampleElement domain class Id.
+		/// Service domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x24892a57, 0x2af7, 0x4c79, 0xa1, 0xdb, 0x39, 0x52, 0x72, 0x8d, 0xc9, 0x5a);
 		/// <summary>
@@ -487,7 +487,7 @@ namespace Company.MobileDSL
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleElement(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Service(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -497,7 +497,7 @@ namespace Company.MobileDSL
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleElement(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Service(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -516,10 +516,10 @@ namespace Company.MobileDSL
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
-		/// Description for Company.MobileDSL.ExampleElement.Name
+		/// Description for Company.MobileDSL.Service.Name
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MobileDSL.ExampleElement/Name.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MobileDSL.ExampleElement/Name.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("Company.MobileDSL.Service/Name.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MobileDSL.Service/Name.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.DefaultValue("")]
 		[DslModeling::ElementName]
 		[DslModeling::DomainObjectId("622f1f8f-a340-416e-b981-8421e85015ed")]
@@ -537,19 +537,19 @@ namespace Company.MobileDSL
 			}
 		}
 		/// <summary>
-		/// Value handler for the ExampleElement.Name domain property.
+		/// Value handler for the Service.Name domain property.
 		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<ExampleElement, global::System.String>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<Service, global::System.String>
 		{
 			private NamePropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ExampleElement.Name domain property value handler.
+			/// Gets the singleton instance of the Service.Name domain property value handler.
 			/// </summary>
 			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ExampleElement.Name domain property.
+			/// Gets the Id of the Service.Name domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -565,7 +565,7 @@ namespace Company.MobileDSL
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ExampleElement element)
+			public override sealed global::System.String GetValue(Service element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.namePropertyStorage;
@@ -576,7 +576,7 @@ namespace Company.MobileDSL
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ExampleElement element, global::System.String newValue)
+			public override sealed void SetValue(Service element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -600,12 +600,12 @@ namespace Company.MobileDSL
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.MobileDSL.MobileAppModelHasElements.ElementDomainRoleId) as MobileAppModel;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.MobileDSL.MobileAppModelHasServices.ElementDomainRoleId) as MobileAppModel;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MobileDSL.MobileAppModelHasElements.ElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MobileDSL.MobileAppModelHasServices.ElementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -615,12 +615,12 @@ namespace Company.MobileDSL
 		/// Gets a list of Targets.
 		/// Description for Company.MobileDSL.ExampleRelationship.Target
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ExampleElement> Targets
+		public virtual DslModeling::LinkedElementCollection<Service> Targets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(global::Company.MobileDSL.ExampleElementReferencesTargets.SourceDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Service>, Service>(global::Company.MobileDSL.ServiceReferencesTargets.SourceDomainRoleId);
 			}
 		}
 		#endregion
@@ -630,12 +630,12 @@ namespace Company.MobileDSL
 		/// Gets a list of Sources.
 		/// Description for Company.MobileDSL.ExampleRelationship.Source
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ExampleElement> Sources
+		public virtual DslModeling::LinkedElementCollection<Service> Sources
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExampleElement>, ExampleElement>(global::Company.MobileDSL.ExampleElementReferencesTargets.TargetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Service>, Service>(global::Company.MobileDSL.ServiceReferencesTargets.TargetDomainRoleId);
 			}
 		}
 		#endregion
@@ -786,6 +786,21 @@ namespace Company.MobileDSL
 			}
 		}
 		#endregion
+		#region States opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of States.
+		/// Description for Company.MobileDSL.ControllerReferencesStates.Controller
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<State> States
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<State>, State>(global::Company.MobileDSL.ControllerReferencesStates.ControllerDomainRoleId);
+			}
+		}
+		#endregion
 	}
 }
 namespace Company.MobileDSL
@@ -930,6 +945,40 @@ namespace Company.MobileDSL
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MobileDSL.MobileAppModelHasStates.StateDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ShowForm opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ShowForm.
+		/// Description for Company.MobileDSL.StateReferencesShowForm.State
+		/// </summary>
+		public virtual ShowForm ShowForm
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.MobileDSL.StateReferencesShowForm.StateDomainRoleId) as ShowForm;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MobileDSL.StateReferencesShowForm.StateDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Controllers opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Controllers.
+		/// Description for Company.MobileDSL.ControllerReferencesStates.State
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Controller> Controllers
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Controller>, Controller>(global::Company.MobileDSL.ControllerReferencesStates.StateDomainRoleId);
 			}
 		}
 		#endregion
@@ -1239,6 +1288,21 @@ namespace Company.MobileDSL
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<GraphicElement>, GraphicElement>(global::Company.MobileDSL.ShowFormHasGraphicElements.ShowFormDomainRoleId);
+			}
+		}
+		#endregion
+		#region Stated opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Stated.
+		/// Description for Company.MobileDSL.StateReferencesShowForm.ShowForm
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<State> Stated
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<State>, State>(global::Company.MobileDSL.StateReferencesShowForm.ShowFormDomainRoleId);
 			}
 		}
 		#endregion
@@ -1567,6 +1631,93 @@ namespace Company.MobileDSL
 			: base(partition, propertyAssignments)
 		{
 		}
+		#endregion
+		#region Text domain property code
+		
+		/// <summary>
+		/// Text domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0xd5b6bf7e, 0xee09, 0x48fa, 0xbb, 0xaa, 0x2c, 0xa0, 0x8d, 0xe1, 0xa0, 0xdd);
+		
+		/// <summary>
+		/// Storage for Text
+		/// </summary>
+		private global::System.String textPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Text domain property.
+		/// Description for Company.MobileDSL.Label.Text
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MobileDSL.Label/Text.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MobileDSL.Label/Text.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d5b6bf7e-ee09-48fa-bbaa-2ca08de1a0dd")]
+		public global::System.String Text
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return textPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TextPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Label.Text domain property.
+		/// </summary>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<Label, global::System.String>
+		{
+			private TextPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Label.Text domain property value handler.
+			/// </summary>
+			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Label.Text domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TextDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Label element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.textPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Label element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.textPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }
@@ -2095,6 +2246,390 @@ namespace Company.MobileDSL
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MobileDSL.MobileAppModelHasAppCoded.AppCodeDomainRoleId, value);
 			}
 		}
+		#endregion
+	}
+}
+namespace Company.MobileDSL
+{
+	/// <summary>
+	/// DomainClass Button
+	/// Description for Company.MobileDSL.Button
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MobileDSL.Button.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MobileDSL.Button.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MobileDSL.MobileDSLDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("14786ab4-ac42-45cc-8391-459ffaa3a079")]
+	public partial class Button : GraphicElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Button domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x14786ab4, 0xac42, 0x45cc, 0x83, 0x91, 0x45, 0x9f, 0xfa, 0xa3, 0xa0, 0x79);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Button(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Button(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Text domain property code
+		
+		/// <summary>
+		/// Text domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0x6188665c, 0x56ce, 0x453d, 0xb2, 0x6f, 0x7f, 0x8d, 0xe8, 0xdb, 0xe6, 0x11);
+		
+		/// <summary>
+		/// Storage for Text
+		/// </summary>
+		private global::System.String textPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Text domain property.
+		/// Description for Company.MobileDSL.Button.Text
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MobileDSL.Button/Text.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MobileDSL.Button/Text.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("6188665c-56ce-453d-b26f-7f8de8dbe611")]
+		public global::System.String Text
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return textPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TextPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Button.Text domain property.
+		/// </summary>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<Button, global::System.String>
+		{
+			private TextPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Button.Text domain property value handler.
+			/// </summary>
+			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Button.Text domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TextDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Button element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.textPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Button element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.textPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.MobileDSL
+{
+	/// <summary>
+	/// DomainClass DropBox
+	/// Description for Company.MobileDSL.DropBox
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MobileDSL.DropBox.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MobileDSL.DropBox.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MobileDSL.MobileDSLDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("87670d15-720b-46ca-a665-c3d05660e116")]
+	public partial class DropBox : GraphicElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// DropBox domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x87670d15, 0x720b, 0x46ca, 0xa6, 0x65, 0xc3, 0xd0, 0x56, 0x60, 0xe1, 0x16);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public DropBox(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public DropBox(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Items domain property code
+		
+		/// <summary>
+		/// Items domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ItemsDomainPropertyId = new global::System.Guid(0xb929f53f, 0xb213, 0x4be7, 0x9c, 0x29, 0x71, 0xe0, 0x5d, 0x40, 0xfd, 0x05);
+		
+		/// <summary>
+		/// Storage for Items
+		/// </summary>
+		private global::System.String itemsPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Items domain property.
+		/// Description for Company.MobileDSL.DropBox.Items
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MobileDSL.DropBox/Items.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MobileDSL.DropBox/Items.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b929f53f-b213-4be7-9c29-71e05d40fd05")]
+		public global::System.String Items
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return itemsPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ItemsPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the DropBox.Items domain property.
+		/// </summary>
+		internal sealed partial class ItemsPropertyHandler : DslModeling::DomainPropertyValueHandler<DropBox, global::System.String>
+		{
+			private ItemsPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the DropBox.Items domain property value handler.
+			/// </summary>
+			public static readonly ItemsPropertyHandler Instance = new ItemsPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the DropBox.Items domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ItemsDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(DropBox element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.itemsPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(DropBox element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.itemsPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.MobileDSL
+{
+	/// <summary>
+	/// DomainClass ListBox
+	/// Description for Company.MobileDSL.ListBox
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MobileDSL.ListBox.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MobileDSL.ListBox.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MobileDSL.MobileDSLDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("64059010-2d6a-4d88-b2a7-fc7c38c67743")]
+	public partial class ListBox : GraphicElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ListBox domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x64059010, 0x2d6a, 0x4d88, 0xb2, 0xa7, 0xfc, 0x7c, 0x38, 0xc6, 0x77, 0x43);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ListBox(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ListBox(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Items domain property code
+		
+		/// <summary>
+		/// Items domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid ItemsDomainPropertyId = new global::System.Guid(0xa618df8d, 0x8384, 0x4423, 0xb7, 0xcb, 0x20, 0xe2, 0x4a, 0xa6, 0x41, 0x49);
+		
+		/// <summary>
+		/// Storage for Items
+		/// </summary>
+		private global::System.String itemsPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Items domain property.
+		/// Description for Company.MobileDSL.ListBox.Items
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MobileDSL.ListBox/Items.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MobileDSL.ListBox/Items.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a618df8d-8384-4423-b7cb-20e24aa64149")]
+		public global::System.String Items
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return itemsPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				ItemsPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ListBox.Items domain property.
+		/// </summary>
+		internal sealed partial class ItemsPropertyHandler : DslModeling::DomainPropertyValueHandler<ListBox, global::System.String>
+		{
+			private ItemsPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ListBox.Items domain property value handler.
+			/// </summary>
+			public static readonly ItemsPropertyHandler Instance = new ItemsPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ListBox.Items domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return ItemsDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ListBox element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.itemsPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ListBox element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.itemsPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }

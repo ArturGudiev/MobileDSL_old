@@ -10,20 +10,20 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: MobileAppModelHasElements -->
-          <xsd:element name="elements" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: MobileAppModelHasServices -->
+          <xsd:element name="services" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of MobileAppModelHasElements</xsd:documentation>
+              <xsd:documentation>Instances of MobileAppModelHasServices</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
                 <xsd:choice minOccurs="0" maxOccurs="unbounded" >
-                  <xsd:element ref="mobileAppModelHasElements">
+                  <xsd:element ref="mobileAppModelHasServices">
                     <xsd:annotation>
-                      <xsd:documentation>[Relationship deriving from MobileAppModelHasElements needs to be serialized in full-form]</xsd:documentation>
+                      <xsd:documentation>[Relationship deriving from MobileAppModelHasServices needs to be serialized in full-form]</xsd:documentation>
                     </xsd:annotation>
                   </xsd:element>
-                  <xsd:element ref="exampleElement" >
+                  <xsd:element ref="service" >
                     <xsd:annotation>
                       <xsd:documentation>[Target role-player]</xsd:documentation>
                     </xsd:annotation>
@@ -171,29 +171,29 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleElement -->
-  <xsd:element name="exampleElement" type="ExampleElement" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleElement">
+  <!-- Service -->
+  <xsd:element name="service" type="Service" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Service">
     <xsd:annotation>
       <xsd:documentation>Elements embedded in the model. Appear as boxes on the diagram.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ExampleElementReferencesTargets -->
+          <!-- Relationship: ServiceReferencesTargets -->
           <xsd:element name="targets" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ExampleElementReferencesTargets</xsd:documentation>
+              <xsd:documentation>Instances of ServiceReferencesTargets</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
                 <xsd:choice minOccurs="0" maxOccurs="unbounded" >
-                  <xsd:element ref="exampleElementReferencesTargets">
+                  <xsd:element ref="serviceReferencesTargets">
                     <xsd:annotation>
-                      <xsd:documentation>[Relationship deriving from ExampleElementReferencesTargets needs to be serialized in full-form]</xsd:documentation>
+                      <xsd:documentation>[Relationship deriving from ServiceReferencesTargets needs to be serialized in full-form]</xsd:documentation>
                     </xsd:annotation>
                   </xsd:element>
-                  <xsd:element ref="exampleElementMoniker" >
+                  <xsd:element ref="serviceMoniker" >
                     <xsd:annotation>
                       <xsd:documentation>[Target role-player]</xsd:documentation>
                     </xsd:annotation>
@@ -215,11 +215,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleElement Moniker -->
-  <xsd:element name="exampleElementMoniker" type="ExampleElementMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleElementMoniker">
+  <!-- Service Moniker -->
+  <xsd:element name="serviceMoniker" type="ServiceMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleElement instance.</xsd:documentation>
+      <xsd:documentation>Moniker for Service instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -237,6 +237,23 @@
   <xsd:complexType name="Controller">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ControllerReferencesStates -->
+          <xsd:element name="states" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ControllerReferencesStates</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="controllerReferencesStates" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ControllerReferencesStates needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -271,6 +288,23 @@
   <xsd:complexType name="State">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: StateReferencesShowForm -->
+          <xsd:element name="showForm" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instance of StateReferencesShowForm</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="stateReferencesShowForm" minOccurs="0" maxOccurs="1">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of StateReferencesShowForm needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -457,6 +491,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -577,17 +613,104 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- MobileAppModelHasElements -->
-  <xsd:element name="mobileAppModelHasElements" abstract="true" type="MobileAppModelHasElements" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="MobileAppModelHasElements" abstract="true" >
+  <!-- Button -->
+  <xsd:element name="button" type="Button" substitutionGroup="graphicElement" />
+  <xsd:complexType name="Button">
+    <xsd:complexContent>
+      <xsd:extension base="GraphicElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Button Moniker -->
+  <xsd:element name="buttonMoniker" type="ButtonMoniker" substitutionGroup="graphicElementMoniker" />
+  <xsd:complexType name="ButtonMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Button instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="GraphicElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DropBox -->
+  <xsd:element name="dropBox" type="DropBox" substitutionGroup="graphicElement" />
+  <xsd:complexType name="DropBox">
+    <xsd:complexContent>
+      <xsd:extension base="GraphicElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Items -->
+        <xsd:attribute name="items" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DropBox Moniker -->
+  <xsd:element name="dropBoxMoniker" type="DropBoxMoniker" substitutionGroup="graphicElementMoniker" />
+  <xsd:complexType name="DropBoxMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DropBox instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="GraphicElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ListBox -->
+  <xsd:element name="listBox" type="ListBox" substitutionGroup="graphicElement" />
+  <xsd:complexType name="ListBox">
+    <xsd:complexContent>
+      <xsd:extension base="GraphicElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Items -->
+        <xsd:attribute name="items" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ListBox Moniker -->
+  <xsd:element name="listBoxMoniker" type="ListBoxMoniker" substitutionGroup="graphicElementMoniker" />
+  <xsd:complexType name="ListBoxMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ListBox instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="GraphicElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MobileAppModelHasServices -->
+  <xsd:element name="mobileAppModelHasServices" abstract="true" type="MobileAppModelHasServices" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MobileAppModelHasServices" abstract="true" >
     <xsd:annotation>
       <xsd:documentation>Embedding relationship between the Model and Elements</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end ExampleElement -->
-          <xsd:element ref="exampleElement" minOccurs="1" maxOccurs="1">
+          <!-- Target end Service -->
+          <xsd:element ref="service" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -603,11 +726,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- MobileAppModelHasElements Moniker -->
-  <xsd:element name="mobileAppModelHasElementsMoniker" type="MobileAppModelHasElementsMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="MobileAppModelHasElementsMoniker">
+  <!-- MobileAppModelHasServices Moniker -->
+  <xsd:element name="mobileAppModelHasServicesMoniker" type="MobileAppModelHasServicesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MobileAppModelHasServicesMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for MobileAppModelHasElements instance.</xsd:documentation>
+      <xsd:documentation>Moniker for MobileAppModelHasServices instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -620,17 +743,17 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleElementReferencesTargets -->
-  <xsd:element name="exampleElementReferencesTargets" abstract="true" type="ExampleElementReferencesTargets" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleElementReferencesTargets" abstract="true" >
+  <!-- ServiceReferencesTargets -->
+  <xsd:element name="serviceReferencesTargets" abstract="true" type="ServiceReferencesTargets" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ServiceReferencesTargets" abstract="true" >
     <xsd:annotation>
       <xsd:documentation>Reference relationship between Elements.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end ExampleElement -->
-          <xsd:element ref="exampleElementMoniker" minOccurs="1" maxOccurs="1">
+          <!-- Target end Service -->
+          <xsd:element ref="serviceMoniker" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -646,11 +769,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleElementReferencesTargets Moniker -->
-  <xsd:element name="exampleElementReferencesTargetsMoniker" type="ExampleElementReferencesTargetsMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleElementReferencesTargetsMoniker">
+  <!-- ServiceReferencesTargets Moniker -->
+  <xsd:element name="serviceReferencesTargetsMoniker" type="ServiceReferencesTargetsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ServiceReferencesTargetsMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleElementReferencesTargets instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ServiceReferencesTargets instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -971,6 +1094,86 @@
   <xsd:complexType name="MobileAppModelHasAppCodedMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for MobileAppModelHasAppCoded instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- StateReferencesShowForm -->
+  <xsd:element name="stateReferencesShowForm" type="StateReferencesShowForm" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="StateReferencesShowForm">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ShowForm -->
+          <xsd:element ref="showFormMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- StateReferencesShowForm Moniker -->
+  <xsd:element name="stateReferencesShowFormMoniker" type="StateReferencesShowFormMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="StateReferencesShowFormMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for StateReferencesShowForm instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ControllerReferencesStates -->
+  <xsd:element name="controllerReferencesStates" type="ControllerReferencesStates" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ControllerReferencesStates">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end State -->
+          <xsd:element ref="stateMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ControllerReferencesStates Moniker -->
+  <xsd:element name="controllerReferencesStatesMoniker" type="ControllerReferencesStatesMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ControllerReferencesStatesMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ControllerReferencesStates instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

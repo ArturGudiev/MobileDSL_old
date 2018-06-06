@@ -1,18 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<mobileDSLDiagram dslVersion="1.0.0.0" Id="006787c0-aa5f-4aa5-b131-013141bca0a3" absoluteBounds="0, 0, 11.875, 8.5" name="Sample">
+<mobileDSLDiagram dslVersion="1.0.0.0" Id="cf7fadaf-83a0-4feb-a951-9d544e6b1991" absoluteBounds="0, 0, 13, 8.5" name="Sample">
   <mobileAppModelMoniker Id="1109d5cb-c545-49f0-b8f1-91f7c519d752" />
   <nestedChildShapes>
-    <stateShape Id="10aed77e-ec4d-466a-bf5d-f720b7641525" absoluteBounds="1.375, 1.125, 3.5, 3.375">
+    <stateShape Id="c324a41f-1a4f-453e-b74b-2ea7835503c0" absoluteBounds="1.375, 0.5, 1.5, 1">
       <stateMoniker Id="1316da41-80cb-4f31-9d7d-f3d470215b8e" />
     </stateShape>
-    <stateShape Id="2ab7e512-fb1c-46db-b48b-a9fa75dcd400" absoluteBounds="7.375, 1.25, 4.25, 3">
+    <stateShape Id="e8aa33cf-480a-4d3b-8ad5-b3e22d0fe0a7" absoluteBounds="11.25, 3.625, 1.5, 1">
       <stateMoniker Id="885be612-0ba8-4bb7-a031-453e3052497b" />
     </stateShape>
-    <showFormCompartmentShape Id="511be494-6308-423e-bb75-09484f25d330" absoluteBounds="1.875, 3, 1.5, 1.3593896484374994">
-      <showFormMoniker Id="36468712-ce32-47da-8764-cc4e633620c6" />
+    <showFormCompartmentShape Id="d37e5694-b4a4-4237-a008-f5a08a804d71" absoluteBounds="8.75, 1.125, 1.5, 1.9362939453124999">
+      <showFormMoniker Id="c45149e8-d887-462c-b3e0-69f151f33431" />
       <nestedChildShapes>
-        <elementListCompartment Id="137ef461-86d1-4bd6-9310-68fdfe094a00" absoluteBounds="1.89, 4.01, 1.4700000000000002, 0.2493896484375" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="362be405-0f5e-48e1-b3b6-8026d367c8ef" absoluteBounds="8.765, 2.135, 1.4700000000000002, 0.8262939453125" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </showFormCompartmentShape>
+    <labelShape Id="2c4827ad-27ad-405b-aa5d-732ba8c69995" absoluteBounds="8.25, 3.125, 1.5, 1">
+      <labelMoniker Id="261eeb15-563f-4594-ae22-ac6a79fec3bf" />
+    </labelShape>
+    <buttonShape Id="0824dea0-1b1f-4216-8aef-bd6a5e2d1e8c" absoluteBounds="8.375, 4.375, 1.5, 1">
+      <buttonMoniker Id="605d65d7-f157-4eb6-bc7f-8cc5eae5c6f8" />
+    </buttonShape>
+    <showFormCompartmentShape Id="00c2810e-4757-4244-98f0-17274f9b4d1d" absoluteBounds="0.75, 2.125, 1.5, 2.3208968098958334">
+      <showFormMoniker Id="23c06aa9-e58b-43a2-8bfa-c932a2a6e8f9" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d86550b0-da71-47ca-a88e-e87bc2c4cdac" absoluteBounds="0.76499999999999968, 3.135, 1.4700000000000002, 1.2108968098958333" name="NameCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </showFormCompartmentShape>
+    <labelShape Id="09851804-3707-4a70-a33d-16ad0864ff88" absoluteBounds="2.375, 4.5, 1.5, 1">
+      <labelMoniker Id="bea127dd-c9cb-4064-b9b9-bfaeec25e62b" />
+    </labelShape>
+    <labelShape Id="74ffa174-db5b-4ac9-869e-f89c0ae8c9e0" absoluteBounds="4.125, 5.75, 1.5, 1">
+      <labelMoniker Id="b11526b4-1dab-48ca-aa52-0c88bc71a6f3" />
+    </labelShape>
+    <buttonShape Id="ece44c15-b781-4464-856b-2e8d9713679b" absoluteBounds="4.125, 4.5, 1.5, 1">
+      <buttonMoniker Id="1079bdcf-9662-4b26-a098-786b2b45a7a2" />
+    </buttonShape>
+    <graphicElementShape Id="c61b179e-51ff-4c1a-98a5-991ff80a5eef" absoluteBounds="0.625, 5.625, 1.5, 1">
+      <dropBoxMoniker Id="097068d5-cc28-483d-a218-00b05bba04b8" />
+    </graphicElementShape>
+    <graphicElementShape Id="aa7fee82-1808-4813-abe1-9cc4d51138a7" absoluteBounds="2.375, 5.75, 1.5, 1">
+      <dropBoxMoniker Id="5a4dbf51-5882-44e9-8b0b-76a50b063ff8" />
+    </graphicElementShape>
+    <stateForm Id="ee700e4c-538c-4164-8095-59423fd51cf8" edgePoints="[(1.8125 : 1.5); (1.8125 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <stateReferencesShowFormMoniker Id="3a695807-2d67-4171-b826-6df4f8503e27" />
+      <nodes>
+        <stateShapeMoniker Id="c324a41f-1a4f-453e-b74b-2ea7835503c0" />
+        <showFormCompartmentShapeMoniker Id="00c2810e-4757-4244-98f0-17274f9b4d1d" />
+      </nodes>
+    </stateForm>
+    <stateForm Id="b9af7a2c-0980-4442-bd0b-a279106719fc" edgePoints="[(11.25 : 4.25); (10.09375 : 4.25); (10.09375 : 3.0612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <stateReferencesShowFormMoniker Id="af7e0eee-4c50-4bbd-b0a9-532fc7ad634d" />
+      <nodes>
+        <stateShapeMoniker Id="e8aa33cf-480a-4d3b-8ad5-b3e22d0fe0a7" />
+        <showFormCompartmentShapeMoniker Id="d37e5694-b4a4-4237-a008-f5a08a804d71" />
+      </nodes>
+    </stateForm>
+    <graphicElementShape Id="bcb78ad2-43ae-471a-850a-8fe3446c8f5b" absoluteBounds="10.625, 4.875, 1.5, 1">
+      <listBoxMoniker Id="2486d23b-9480-4668-b2d2-a01546443563" />
+    </graphicElementShape>
   </nestedChildShapes>
 </mobileDSLDiagram>

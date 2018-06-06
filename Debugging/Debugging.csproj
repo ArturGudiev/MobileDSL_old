@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6884ca03-f839-4919-aaea-8be86a116baa}</ProjectGuid>
+    <ProjectGuid>{6884CA03-F839-4919-AAEA-8BE86A116BAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -36,6 +36,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserSection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserSection.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -44,9 +54,9 @@
       <SubType>
       </SubType>
     </None>
-    <None Include="MobileDSLReport.tt">
+    <None Include="Controller.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MobileDSLReport.txt</LastGenOutput>
+      <LastGenOutput>Controller.cs</LastGenOutput>
     </None>
     <None Include="MobileDSLReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -55,6 +65,10 @@
     <None Include="Sample.mdsl" />
     <None Include="Sample.mdsl.diagram">
       <DependentUpon>Sample.mdsl</DependentUpon>
+    </None>
+    <None Include="Volunteer.mdsl" />
+    <None Include="Volunteer.mdsl.diagram">
+      <DependentUpon>Volunteer.mdsl</DependentUpon>
     </None>
     <None Include="Test.mdsl" />
     <None Include="Test.mdsl.diagram">
@@ -65,11 +79,19 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MobileDSLReport.txt">
+    <Content Include="Test.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MobileDSLReport.tt</DependentUpon>
+      <DependentUpon>Test.tt</DependentUpon>
     </Content>
+    <None Include="Test.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Test.txt</LastGenOutput>
+    </None>
+    <None Include="UserSection.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserSection.cs</LastGenOutput>
+    </None>
     <Content Include="MobileDSLReportVB.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -29,11 +29,11 @@ namespace Company.MobileDSL
 	[VSShell::ProvideToolWindowVisibility(typeof(MobileDSLExplorerToolWindow), Constants.MobileDSLEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@MobileDSLToolboxTab;Company.MobileDSL.Dsl.dll", "Company.MobileDSL.MobileDSLToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
-					"@ExampleElementToolboxItem;Company.MobileDSL.Dsl.dll", 
-					"Company.MobileDSL.ExampleElementToolboxItem", 
+					"@ServiceToolboxItem;Company.MobileDSL.Dsl.dll", 
+					"Company.MobileDSL.ServiceToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"CreateExampleClassF1Keyword", 
-					"@ExampleElementToolboxBitmap;Company.MobileDSL.Dsl.dll", 
+					"@ServiceToolboxBitmap;Company.MobileDSL.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
@@ -116,6 +116,46 @@ namespace Company.MobileDSL
 					"@AppCodeToolboxBitmap;Company.MobileDSL.Dsl.dll", 
 					0xff00ff,
 					Index = 10)]
+	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
+					"@StateFormToolboxItem;Company.MobileDSL.Dsl.dll", 
+					"Company.MobileDSL.StateFormToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"StateForm", 
+					"@StateFormToolboxBitmap;Company.MobileDSL.Dsl.dll", 
+					0xff00ff,
+					Index = 11)]
+	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
+					"@ButtonToolboxItem;Company.MobileDSL.Dsl.dll", 
+					"Company.MobileDSL.ButtonToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Button", 
+					"@ButtonToolboxBitmap;Company.MobileDSL.Dsl.dll", 
+					0xff00ff,
+					Index = 12)]
+	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
+					"@DropBoxToolboxItem;Company.MobileDSL.Dsl.dll", 
+					"Company.MobileDSL.DropBoxToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"DropBox", 
+					"@DropBoxToolboxBitmap;Company.MobileDSL.Dsl.dll", 
+					0xff00ff,
+					Index = 13)]
+	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
+					"@ListBoxToolboxItem;Company.MobileDSL.Dsl.dll", 
+					"Company.MobileDSL.ListBoxToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ListBox", 
+					"@ListBoxToolboxBitmap;Company.MobileDSL.Dsl.dll", 
+					0xff00ff,
+					Index = 14)]
+	[VSShell::ProvideStaticToolboxItem("Company.MobileDSL.MobileDSLToolboxTab",
+					"@ControllerStateReferenceToolboxItem;Company.MobileDSL.Dsl.dll", 
+					"Company.MobileDSL.ControllerStateReferenceToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ControllerStateReference", 
+					"@ControllerStateReferenceToolboxBitmap;Company.MobileDSL.Dsl.dll", 
+					0xff00ff,
+					Index = 15)]
 	[VSShell::ProvideEditorFactory(typeof(MobileDSLEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(MobileDSLEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(MobileDSLEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

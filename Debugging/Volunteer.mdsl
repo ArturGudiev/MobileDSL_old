@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mobileAppModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="0cbfe0e1-ea2f-4566-83b2-2f9a107d319a" xmlns="http://schemas.microsoft.com/dsltools/MobileDSL">
+  <controllers>
+    <mobileAppModelHasControllers Id="e1f61f68-0ca6-4e98-8083-ba73d531f9d8">
+      <controller Id="26e44ae5-224e-4e88-bacc-ce96ac2ca531" name="LoginController">
+        <states>
+          <controllerReferencesStates Id="65ad7ce2-b7af-4f3f-9f2b-4e5ad3d24c38">
+            <stateMoniker Id="e6e24728-e828-4982-a970-61f38eb98b94" />
+          </controllerReferencesStates>
+        </states>
+      </controller>
+    </mobileAppModelHasControllers>
+    <mobileAppModelHasControllers Id="5a3dc2d5-7c8c-408b-ac58-cdddf7dd4601">
+      <controller Id="092ab10c-d1d4-4e11-84fa-834595fb631d" name="MainController">
+        <states>
+          <controllerReferencesStates Id="bed3b264-444e-46ba-b8a2-cd2d950ced4c">
+            <stateMoniker Id="872ee608-d5f4-4061-a904-a56a65fa366e" />
+          </controllerReferencesStates>
+          <controllerReferencesStates Id="0552b732-0776-4df5-97ad-64fb1d8462c0">
+            <stateMoniker Id="21a7c391-5fd3-45b9-a49b-666aae85efd5" />
+          </controllerReferencesStates>
+        </states>
+      </controller>
+    </mobileAppModelHasControllers>
+  </controllers>
+  <states>
+    <mobileAppModelHasStates Id="512cfdc3-65c0-456d-90d8-bc1d79b1fdc3">
+      <state Id="e6e24728-e828-4982-a970-61f38eb98b94" name="LoginState">
+        <showForm>
+          <stateReferencesShowForm Id="77241945-ee77-4adf-abc9-4d15f46d9406">
+            <showFormMoniker Id="00fac7f3-af62-427a-bdee-5c02b97b940c" />
+          </stateReferencesShowForm>
+        </showForm>
+      </state>
+    </mobileAppModelHasStates>
+    <mobileAppModelHasStates Id="9f502140-00e3-47a5-ad45-40c6a6f9a95b">
+      <state Id="872ee608-d5f4-4061-a904-a56a65fa366e" name="StartState">
+        <showForm>
+          <stateReferencesShowForm Id="19f14b63-87db-4dd3-b204-523ce99adc03">
+            <showFormMoniker Id="e9f8c585-8b8d-4131-9546-30b1cbf5d2d4" />
+          </stateReferencesShowForm>
+        </showForm>
+      </state>
+    </mobileAppModelHasStates>
+    <mobileAppModelHasStates Id="8d8118c3-c11f-4635-a8c1-40a218ae0683">
+      <state Id="21a7c391-5fd3-45b9-a49b-666aae85efd5" name="CheckinState">
+        <showForm>
+          <stateReferencesShowForm Id="683e699a-0d9a-4c2b-a29e-6735ede535dd">
+            <showFormMoniker Id="1fc4aaeb-d479-4dea-aab4-79e47ba7d5bb" />
+          </stateReferencesShowForm>
+        </showForm>
+      </state>
+    </mobileAppModelHasStates>
+  </states>
+  <showFormed>
+    <mobileAppModelHasShowFormed Id="f29032ef-272e-4a14-9e1d-6e44c44a4ea5">
+      <showForm Id="00fac7f3-af62-427a-bdee-5c02b97b940c" name="LoginForm">
+        <graphicElements>
+          <showFormHasGraphicElements Id="3b66d9ed-e447-4839-9090-69500559eca0">
+            <input Id="670afdf3-b297-4f1a-b73c-7baa55319504" name="VolunteerIdInput" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="f4de6214-def8-4c47-b183-2d98c0777ee8">
+            <label Id="ce849fd0-20dc-4df7-aaa1-0d74c2ca5ffd" name="PasswordLabel" text="Password" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="6b0a15dc-b338-44d9-9d1d-cead7b4446e4">
+            <label Id="8d30587c-7f51-4183-b943-4d348194d91d" name="VolunteerIdLabel" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="e5d7ed77-dae9-4e59-8f5d-5653be481933">
+            <input Id="933882e1-978f-4113-9934-1a116ee665fe" name="PasswordInput" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="a33b1d79-fc29-4c7f-a8b6-25ac425168c0">
+            <button Id="1bdfaa7b-afaa-4030-9e2b-706e46392707" name="loginButton" text="LoginButton" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
+    </mobileAppModelHasShowFormed>
+    <mobileAppModelHasShowFormed Id="0731d4bf-401a-45ff-9c12-f4ac8cf15c1a">
+      <showForm Id="e9f8c585-8b8d-4131-9546-30b1cbf5d2d4" name="StartStateForm">
+        <graphicElements>
+          <showFormHasGraphicElements Id="896617c6-7954-4981-8168-2e125be322cd">
+            <button Id="ad9b4fa1-ab78-4f09-be8e-105461901925" name="checkinButton" text="CheckInButton" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="0768d7e5-330f-4d3e-a24b-adba7994ba14">
+            <button Id="db27a770-672c-4e93-869d-9f814915ecac" name="LogoutButton" text="Log Out" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
+    </mobileAppModelHasShowFormed>
+    <mobileAppModelHasShowFormed Id="b78039fc-a6b4-4ce3-a26c-b104fc6796cb">
+      <showForm Id="1fc4aaeb-d479-4dea-aab4-79e47ba7d5bb" name="CheckinForm">
+        <graphicElements>
+          <showFormHasGraphicElements Id="737173a6-70ef-4268-97a2-a236081ed59e">
+            <label Id="3080ea6e-3a70-44c5-bf47-463d24223479" name="generatedKeyLabel" text="Generated key:" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="aa94a8ea-0cc1-4218-82b0-c926f8b249fd">
+            <label Id="1ee8eb2c-c0d2-4907-901c-1c97b5ef7521" name="KeyLabel" />
+          </showFormHasGraphicElements>
+          <showFormHasGraphicElements Id="bf26b24c-b767-4018-bd50-9d06cda89574">
+            <button Id="a2661c7e-ac0b-46d1-a730-0b61224bab09" name="BackButton" text="Back" />
+          </showFormHasGraphicElements>
+        </graphicElements>
+      </showForm>
+    </mobileAppModelHasShowFormed>
+  </showFormed>
+</mobileAppModel>

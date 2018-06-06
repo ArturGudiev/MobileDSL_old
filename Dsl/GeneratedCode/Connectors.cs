@@ -158,3 +158,120 @@ namespace Company.MobileDSL
 		#endregion
 	}
 }
+namespace Company.MobileDSL
+{
+	/// <summary>
+	/// DomainClass ReferenceConnection
+	/// Description for Company.MobileDSL.ReferenceConnection
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MobileDSL.ReferenceConnection.DisplayName", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MobileDSL.ReferenceConnection.Description", typeof(global::Company.MobileDSL.MobileDSLDomainModel), "Company.MobileDSL.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MobileDSL.MobileDSLDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("2604cf45-9b75-4837-9b3f-0354f26b0d4f")]
+	public partial class ReferenceConnection : DslDiagrams::BinaryLinkShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ReferenceConnection.
+		/// </summary>
+		public static DslDiagrams::Decorator FindReferenceConnectionDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ReferenceConnection domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2604cf45, 0x9b75, 0x4837, 0x9b, 0x3f, 0x03, 0x54, 0xf2, 0x6b, 0x0d, 0x4f);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ReferenceConnection(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ReferenceConnection(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}

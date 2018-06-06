@@ -1,0 +1,139 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ MobileDSL processor="MobileDSLDirectiveProcessor" requires="fileName='Volunteer.mdsl'" #>
+
+//Generated material. Generating code in C#.
+using System;
+using Ubiq.Graphics;
+namespace Application0{
+  public abstract class Controller
+    {
+        protected Screen Screen;
+        protected Application0 app;
+
+        public Controller(Application0 app)
+        {
+            this.app = app;
+            this.Screen = app.Screen;
+        }
+        public abstract void action();
+    }
+ 
+
+
+<#
+	foreach (Controller controller in this.MobileAppModel.Controllers)
+	{
+#>
+	public class <#= controller.Name #>  : Controller{
+
+<# getPrimitivesFromController(controller); #>
+        private static <#= controller.Name #> instance;
+        private <#= controller.Name #>(Application0 app) : base(app)
+        {
+        }
+
+        public static <#= controller.Name #> getInstance(Application0 app)
+        {
+            if (instance == null)
+                instance = new <#= controller.Name #>(app);
+            return instance;
+        }
+
+        enum <#= controller.Name #>State
+        {
+        <#
+	    foreach (State state in controller.States)
+        {
+        #>
+            <#= state.Name #>,
+        <# }#>
+        }
+
+         public override void action(){}
+        <#makeShowFunctions(controller);#>
+    }
+<# } #>
+}
+<#+  //=======================================================  
+private void getPrimitivesFromController(Controller controller)  
+{  
+	foreach (State state in controller.States)
+        {#>
+<#+getPrimitivesFromForm(state.ShowForm);#>
+<#+}}#>
+
+<#+  //=======================================================  
+private void makeShowFunctions(Controller controller)  
+{  
+	foreach (State state in controller.States)
+        {#> 
+<#+ showState(state);#>
+<#+}}#>
+<#+  //=======================================================  
+private void showState(State state)  
+{ #>private void show<#=state.Name#>(){
+<#+getPrimitiveConstructorsFromForm(state.ShowForm);#>
+var panel = new StackPanel{};
+Screen.Content = panel;
+}
+<#+}#>
+
+<#+  //======================================================
+private void getPrimitivesFromForm(ShowForm form)  
+{  
+	foreach (GraphicElement element in form.GraphicElements){#>
+<#+typeOf(element);#> <#= element.Name #>;
+<#+}}#>
+<#+  //=======================================================
+private void getPrimitiveConstructorsFromForm(ShowForm form)  
+{  
+	foreach (GraphicElement element in form.GraphicElements){#>
+<#+constructorOf(element);#> 
+<#+}}#>
+<#+  //=======================================================  
+private void constructorOf(GraphicElement element)  
+{  #>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Button)) {#><#=element.Name#> = new Button{
+    VerticalAlignment = VerticalAlignment.Center, 
+    HorizontalAlignment = HorizontalAlignment.Center, 
+    Background = new SolidColorBrush(Colors.Gray), 
+    Foreground = new SolidColorBrush(Colors.Black), 
+    Padding = new Thickness(Screen.NormalFontSize), 
+    WrapContent = true, 
+    Font = new Font(new FontFamily("Arial"), 0.5 * Screen.LargeFontSize), 
+    Text = "<#=((Company.MobileDSL.Button)element).Text#>"
+};<#+}#>
+
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Label)) {#><#=element.Name#> = new TextBlock{
+                VerticalAlignment = VerticalAlignment.Center, 
+                HorizontalAlignment = HorizontalAlignment.Center, 
+                WrapContent = true, 
+                Font = new Font(new FontFamily("Arial"), 16),
+                Foreground = new SolidColorBrush(Colors.Black),
+                Text = "<#=((Company.MobileDSL.Label)element).Text#>"
+};<#+}#>
+
+
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {#><#=element.Name#> = new Input{
+    VerticalAlignment = VerticalAlignment.Center, 
+    HorizontalAlignment = HorizontalAlignment.Center, 
+    Background = new SolidColorBrush(Colors.White), 
+    Foreground = new SolidColorBrush(Colors.Black), 
+    Padding = new Thickness(Screen.NormalFontSize), 
+    WrapContent = true,
+    Width = 150,
+    Font = new Font(new FontFamily("Arial"), 12),
+    InputMode = Ubiq.Graphics.InputMode.Text,
+    Text = ""
+            };<#+}#>
+<#+}#>
+<#+  //=======================================================  
+private void typeOf(GraphicElement element)  
+{  #>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Button)) {#>Button<#+}#>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Label)) {#>Label<#+}#>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {#>Input<#+}#>
+<#+}#>
+
+

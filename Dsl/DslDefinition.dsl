@@ -6,10 +6,10 @@
         <ElementMergeDirective>
           <Notes>Creates an embedding link when an element is dropped onto a model. </Notes>
           <Index>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Service" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>MobileAppModelHasElements.Elements</DomainPath>
+            <DomainPath>MobileAppModelHasServices.Services</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -70,9 +70,9 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="24892a57-2af7-4c79-a1db-3952728dc95a" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="ExampleElement" DisplayName="Example Element" Namespace="Company.MobileDSL">
+    <DomainClass Id="24892a57-2af7-4c79-a1db-3952728dc95a" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="Service" DisplayName="Service" Namespace="Company.MobileDSL">
       <Properties>
-        <DomainProperty Id="622f1f8f-a340-416e-b981-8421e85015ed" Description="Description for Company.MobileDSL.ExampleElement.Name" Name="Name" DisplayName="Name" DefaultValue="" IsElementName="true">
+        <DomainProperty Id="622f1f8f-a340-416e-b981-8421e85015ed" Description="Description for Company.MobileDSL.Service.Name" Name="Name" DisplayName="Name" DefaultValue="" IsElementName="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -143,6 +143,13 @@
       <BaseClass>
         <DomainClassMoniker Name="GraphicElement" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="d5b6bf7e-ee09-48fa-bbaa-2ca08de1a0dd" Description="Description for Company.MobileDSL.Label.Text" Name="Text" DisplayName="Text">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="033d3c25-bf44-4e43-a27b-c884fbbccff2" Description="Description for Company.MobileDSL.ServiceInvoke" Name="ServiceInvoke" DisplayName="Service Invoke" Namespace="Company.MobileDSL">
       <Properties>
@@ -176,11 +183,47 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
+    <DomainClass Id="14786ab4-ac42-45cc-8391-459ffaa3a079" Description="Description for Company.MobileDSL.Button" Name="Button" DisplayName="Button" Namespace="Company.MobileDSL">
+      <BaseClass>
+        <DomainClassMoniker Name="GraphicElement" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="6188665c-56ce-453d-b26f-7f8de8dbe611" Description="Description for Company.MobileDSL.Button.Text" Name="Text" DisplayName="Text">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="87670d15-720b-46ca-a665-c3d05660e116" Description="Description for Company.MobileDSL.DropBox" Name="DropBox" DisplayName="Drop Box" Namespace="Company.MobileDSL">
+      <BaseClass>
+        <DomainClassMoniker Name="GraphicElement" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="b929f53f-b213-4be7-9c29-71e05d40fd05" Description="Description for Company.MobileDSL.DropBox.Items" Name="Items" DisplayName="Items">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="64059010-2d6a-4d88-b2a7-fc7c38c67743" Description="Description for Company.MobileDSL.ListBox" Name="ListBox" DisplayName="List Box" Namespace="Company.MobileDSL">
+      <BaseClass>
+        <DomainClassMoniker Name="GraphicElement" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="a618df8d-8384-4423-b7cb-20e24aa64149" Description="Description for Company.MobileDSL.ListBox.Items" Name="Items" DisplayName="Items">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="1e8b579c-469a-42c2-9544-2767371c0e6d" Description="Embedding relationship between the Model and Elements" Name="MobileAppModelHasElements" DisplayName="Mobile App Model Has Elements" Namespace="Company.MobileDSL" IsEmbedding="true">
+    <DomainRelationship Id="1e8b579c-469a-42c2-9544-2767371c0e6d" Description="Embedding relationship between the Model and Elements" Name="MobileAppModelHasServices" DisplayName="Mobile App Model Has Services" Namespace="Company.MobileDSL" IsEmbedding="true">
       <Source>
-        <DomainRole Id="e6c4156f-1227-4494-a061-b7d4b23c3f7b" Description="" Name="MobileAppModel" DisplayName="Mobile App Model" PropertyName="Elements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elements">
+        <DomainRole Id="e6c4156f-1227-4494-a061-b7d4b23c3f7b" Description="" Name="MobileAppModel" DisplayName="Mobile App Model" PropertyName="Services" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Services">
           <RolePlayer>
             <DomainClassMoniker Name="MobileAppModel" />
           </RolePlayer>
@@ -189,23 +232,23 @@
       <Target>
         <DomainRole Id="1fab62c9-87ec-4c8f-86c6-78cab985f407" Description="" Name="Element" DisplayName="Element" PropertyName="MobileAppModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Mobile App Model">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Service" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="f9e3a406-a3af-4230-97e1-4a697785b1ea" Description="Reference relationship between Elements." Name="ExampleElementReferencesTargets" DisplayName="Example Element References Targets" Namespace="Company.MobileDSL">
+    <DomainRelationship Id="f9e3a406-a3af-4230-97e1-4a697785b1ea" Description="Reference relationship between Elements." Name="ServiceReferencesTargets" DisplayName="Service References Targets" Namespace="Company.MobileDSL">
       <Source>
         <DomainRole Id="7d67102a-74d2-4122-804c-7eadf9eccecf" Description="Description for Company.MobileDSL.ExampleRelationship.Target" Name="Source" DisplayName="Source" PropertyName="Targets" PropertyDisplayName="Targets">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Service" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
         <DomainRole Id="2d900298-fbf7-47a1-a191-f2962d205172" Description="Description for Company.MobileDSL.ExampleRelationship.Source" Name="Target" DisplayName="Target" PropertyName="Sources" PropertyDisplayName="Sources">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleElement" />
+            <DomainClassMoniker Name="Service" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -338,6 +381,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="cadc549c-bf39-43b1-a459-1fda3a3d1cb8" Description="Description for Company.MobileDSL.StateReferencesShowForm" Name="StateReferencesShowForm" DisplayName="State References Show Form" Namespace="Company.MobileDSL">
+      <Source>
+        <DomainRole Id="06af6308-3725-42e3-b565-c2c80d7a1b05" Description="Description for Company.MobileDSL.StateReferencesShowForm.State" Name="State" DisplayName="State" PropertyName="ShowForm" Multiplicity="ZeroOne" PropertyDisplayName="Show Form">
+          <RolePlayer>
+            <DomainClassMoniker Name="State" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="ae9637a7-287e-4728-83ab-074016e931bd" Description="Description for Company.MobileDSL.StateReferencesShowForm.ShowForm" Name="ShowForm" DisplayName="Show Form" PropertyName="Stated" PropertyDisplayName="Stated">
+          <RolePlayer>
+            <DomainClassMoniker Name="ShowForm" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="7610ecef-5792-4a97-a39e-2131d9587049" Description="Description for Company.MobileDSL.ControllerReferencesStates" Name="ControllerReferencesStates" DisplayName="Controller References States" Namespace="Company.MobileDSL">
+      <Source>
+        <DomainRole Id="2006ecac-96f4-4fbf-815e-a7970e88ca98" Description="Description for Company.MobileDSL.ControllerReferencesStates.Controller" Name="Controller" DisplayName="Controller" PropertyName="States" PropertyDisplayName="States">
+          <RolePlayer>
+            <DomainClassMoniker Name="Controller" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="239a411c-f08b-4b78-a001-b7b8d9835e7b" Description="Description for Company.MobileDSL.ControllerReferencesStates.State" Name="State" DisplayName="State" PropertyName="Controllers" PropertyDisplayName="Controllers">
+          <RolePlayer>
+            <DomainClassMoniker Name="State" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -357,7 +432,7 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="ffe02b1e-7526-4957-abdc-3edf3018dc7b" Description="Shape used to represent ExampleElements on a Diagram." Name="ExampleShape" DisplayName="Example Shape" Namespace="Company.MobileDSL" FixedTooltipText="Example Shape" FillColor="242, 239, 229" OutlineColor="113, 111, 110" InitialWidth="2" InitialHeight="0.75" OutlineThickness="0.01" Geometry="Rectangle">
+    <GeometryShape Id="ffe02b1e-7526-4957-abdc-3edf3018dc7b" Description="Shape used to represent ExampleElements on a Diagram." Name="ServiceShape" DisplayName="Service Shape" Namespace="Company.MobileDSL" FixedTooltipText="Service Shape" FillColor="242, 239, 229" OutlineColor="113, 111, 110" InitialWidth="2" InitialHeight="0.75" OutlineThickness="0.01" Geometry="Rectangle">
       <Notes>The shape has a text decorator used to display the Name property of the mapped ExampleElement.</Notes>
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
@@ -397,6 +472,9 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerBottomCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TextDecorator" DisplayName="Text Decorator" DefaultText="TextDecorator" />
+      </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="8f65d10e-b7bc-4aa4-b999-3561ce24417f" Description="Description for Company.MobileDSL.ServiceInvokeShape" Name="ServiceInvokeShape" DisplayName="Service Invoke Shape" Namespace="Company.MobileDSL" FixedTooltipText="Service Invoke Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
@@ -418,17 +496,29 @@
         <TextDecorator Name="TextDecorator" DisplayName="Text Decorator" DefaultText="TextDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="d2dffee1-302e-4d09-9427-1688f371d277" Description="Description for Company.MobileDSL.ButtonShape" Name="ButtonShape" DisplayName="Button Shape" Namespace="Company.MobileDSL" FixedTooltipText="Button Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TextDecorator" DisplayName="Text Decorator" DefaultText="TextDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <CompartmentShape Id="c73dd152-bf2f-44b5-ae7e-8385fe5283ed" Description="Description for Company.MobileDSL.StackPanelShape" Name="StackPanelShape" DisplayName="Stack Panel Shape" Namespace="Company.MobileDSL" FixedTooltipText="Stack Panel Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+      <Compartment Name="NameCompartment" />
+    </CompartmentShape>
   </Shapes>
   <Connectors>
     <Connector Id="0ea3e37d-e83f-4b31-ae52-08b2bd603867" Description="Connector between the ExampleShapes. Represents ExampleRelationships on the Diagram." Name="ExampleConnector" DisplayName="Example Connector" Namespace="Company.MobileDSL" FixedTooltipText="Example Connector" Color="113, 111, 110" TargetEndStyle="EmptyArrow" Thickness="0.01" />
+    <Connector Id="2604cf45-9b75-4837-9b3f-0354f26b0d4f" Description="Description for Company.MobileDSL.ReferenceConnection" Name="ReferenceConnection" DisplayName="Reference Connection" Namespace="Company.MobileDSL" FixedTooltipText="Reference Connection" />
   </Connectors>
   <XmlSerializationBehavior Name="MobileDSLSerializationBehavior" Namespace="Company.MobileDSL">
     <ClassData>
       <XmlClassData TypeName="MobileAppModel" MonikerAttributeName="" SerializeId="true" MonikerElementName="mobileAppModelMoniker" ElementName="mobileAppModel" MonikerTypeName="MobileAppModelMoniker">
         <DomainClassMoniker Name="MobileAppModel" />
         <ElementData>
-          <XmlRelationshipData RoleElementName="elements">
-            <DomainRelationshipMoniker Name="MobileAppModelHasElements" />
+          <XmlRelationshipData RoleElementName="services">
+            <DomainRelationshipMoniker Name="MobileAppModelHasServices" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="controllers">
             <DomainRelationshipMoniker Name="MobileAppModelHasControllers" />
@@ -453,25 +543,25 @@
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ExampleElement" MonikerAttributeName="name" SerializeId="true" MonikerElementName="exampleElementMoniker" ElementName="exampleElement" MonikerTypeName="ExampleElementMoniker">
-        <DomainClassMoniker Name="ExampleElement" />
+      <XmlClassData TypeName="Service" MonikerAttributeName="name" SerializeId="true" MonikerElementName="serviceMoniker" ElementName="service" MonikerTypeName="ServiceMoniker">
+        <DomainClassMoniker Name="Service" />
         <ElementData>
           <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="ExampleElement/Name" />
+            <DomainPropertyMoniker Name="Service/Name" />
           </XmlPropertyData>
           <XmlRelationshipData RoleElementName="targets">
-            <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+            <DomainRelationshipMoniker Name="ServiceReferencesTargets" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="MobileAppModelHasElements" MonikerAttributeName="" SerializeId="true" MonikerElementName="mobileAppModelHasElementsMoniker" ElementName="mobileAppModelHasElements" MonikerTypeName="MobileAppModelHasElementsMoniker">
-        <DomainRelationshipMoniker Name="MobileAppModelHasElements" />
+      <XmlClassData TypeName="MobileAppModelHasServices" MonikerAttributeName="" SerializeId="true" MonikerElementName="mobileAppModelHasServicesMoniker" ElementName="mobileAppModelHasServices" MonikerTypeName="MobileAppModelHasServicesMoniker">
+        <DomainRelationshipMoniker Name="MobileAppModelHasServices" />
       </XmlClassData>
-      <XmlClassData TypeName="ExampleElementReferencesTargets" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleElementReferencesTargetsMoniker" ElementName="exampleElementReferencesTargets" MonikerTypeName="ExampleElementReferencesTargetsMoniker">
-        <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+      <XmlClassData TypeName="ServiceReferencesTargets" MonikerAttributeName="" SerializeId="true" MonikerElementName="serviceReferencesTargetsMoniker" ElementName="serviceReferencesTargets" MonikerTypeName="ServiceReferencesTargetsMoniker">
+        <DomainRelationshipMoniker Name="ServiceReferencesTargets" />
       </XmlClassData>
-      <XmlClassData TypeName="ExampleShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleShapeMoniker" ElementName="exampleShape" MonikerTypeName="ExampleShapeMoniker">
-        <GeometryShapeMoniker Name="ExampleShape" />
+      <XmlClassData TypeName="ServiceShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="serviceShapeMoniker" ElementName="serviceShape" MonikerTypeName="ServiceShapeMoniker">
+        <GeometryShapeMoniker Name="ServiceShape" />
       </XmlClassData>
       <XmlClassData TypeName="ExampleConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleConnectorMoniker" ElementName="exampleConnector" MonikerTypeName="ExampleConnectorMoniker">
         <ConnectorMoniker Name="ExampleConnector" />
@@ -488,6 +578,9 @@
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="Controller/Name" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="states">
+            <DomainRelationshipMoniker Name="ControllerReferencesStates" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ControllerShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="controllerShapeMoniker" ElementName="controllerShape" MonikerTypeName="ControllerShapeMoniker">
@@ -502,6 +595,9 @@
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="State/Name" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="showForm">
+            <DomainRelationshipMoniker Name="StateReferencesShowForm" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="StateShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="stateShapeMoniker" ElementName="stateShape" MonikerTypeName="StateShapeMoniker">
@@ -557,6 +653,11 @@
       </XmlClassData>
       <XmlClassData TypeName="Label" MonikerAttributeName="" SerializeId="true" MonikerElementName="labelMoniker" ElementName="label" MonikerTypeName="LabelMoniker">
         <DomainClassMoniker Name="Label" />
+        <ElementData>
+          <XmlPropertyData XmlName="text">
+            <DomainPropertyMoniker Name="Label/Text" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="InputShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="inputShapeMoniker" ElementName="inputShape" MonikerTypeName="InputShapeMoniker">
         <GeometryShapeMoniker Name="InputShape" />
@@ -612,25 +713,102 @@
       <XmlClassData TypeName="AppCodeShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="appCodeShapeMoniker" ElementName="appCodeShape" MonikerTypeName="AppCodeShapeMoniker">
         <GeometryShapeMoniker Name="AppCodeShape" />
       </XmlClassData>
+      <XmlClassData TypeName="StateReferencesShowForm" MonikerAttributeName="" SerializeId="true" MonikerElementName="stateReferencesShowFormMoniker" ElementName="stateReferencesShowForm" MonikerTypeName="StateReferencesShowFormMoniker">
+        <DomainRelationshipMoniker Name="StateReferencesShowForm" />
+      </XmlClassData>
+      <XmlClassData TypeName="ReferenceConnection" MonikerAttributeName="" SerializeId="true" MonikerElementName="referenceConnectionMoniker" ElementName="referenceConnection" MonikerTypeName="ReferenceConnectionMoniker">
+        <ConnectorMoniker Name="ReferenceConnection" />
+      </XmlClassData>
+      <XmlClassData TypeName="Button" MonikerAttributeName="" SerializeId="true" MonikerElementName="buttonMoniker" ElementName="button" MonikerTypeName="ButtonMoniker">
+        <DomainClassMoniker Name="Button" />
+        <ElementData>
+          <XmlPropertyData XmlName="text">
+            <DomainPropertyMoniker Name="Button/Text" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ButtonShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="buttonShapeMoniker" ElementName="buttonShape" MonikerTypeName="ButtonShapeMoniker">
+        <GeometryShapeMoniker Name="ButtonShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="DropBox" MonikerAttributeName="" SerializeId="true" MonikerElementName="dropBoxMoniker" ElementName="dropBox" MonikerTypeName="DropBoxMoniker">
+        <DomainClassMoniker Name="DropBox" />
+        <ElementData>
+          <XmlPropertyData XmlName="items">
+            <DomainPropertyMoniker Name="DropBox/Items" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ListBox" MonikerAttributeName="" SerializeId="true" MonikerElementName="listBoxMoniker" ElementName="listBox" MonikerTypeName="ListBoxMoniker">
+        <DomainClassMoniker Name="ListBox" />
+        <ElementData>
+          <XmlPropertyData XmlName="items">
+            <DomainPropertyMoniker Name="ListBox/Items" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ControllerReferencesStates" MonikerAttributeName="" SerializeId="true" MonikerElementName="controllerReferencesStatesMoniker" ElementName="controllerReferencesStates" MonikerTypeName="ControllerReferencesStatesMoniker">
+        <DomainRelationshipMoniker Name="ControllerReferencesStates" />
+      </XmlClassData>
+      <XmlClassData TypeName="StackPanelShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="stackPanelShapeMoniker" ElementName="stackPanelShape" MonikerTypeName="StackPanelShapeMoniker">
+        <CompartmentShapeMoniker Name="StackPanelShape" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="MobileDSLExplorer" />
   <ConnectionBuilders>
-    <ConnectionBuilder Name="ExampleElementReferencesTargetsBuilder">
+    <ConnectionBuilder Name="ServiceReferencesTargetsBuilder">
       <Notes>Provides for the creation of an ExampleRelationship by pointing at two ExampleElements.</Notes>
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+        <DomainRelationshipMoniker Name="ServiceReferencesTargets" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="ExampleElement" />
+              <DomainClassMoniker Name="Service" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
         <TargetDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="ExampleElement" />
+              <DomainClassMoniker Name="Service" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="StateReferencesShowFormBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="StateReferencesShowForm" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="State" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ShowForm" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ControllerReferencesStatesBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ControllerReferencesStates" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Controller" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="State" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -643,19 +821,19 @@
     </Class>
     <ShapeMaps>
       <ShapeMap>
-        <DomainClassMoniker Name="ExampleElement" />
+        <DomainClassMoniker Name="Service" />
         <ParentElementPath>
-          <DomainPath>MobileAppModelHasElements.MobileAppModel/!MobileAppModel</DomainPath>
+          <DomainPath>MobileAppModelHasServices.MobileAppModel/!MobileAppModel</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="ExampleShape/NameDecorator" />
+          <TextDecoratorMoniker Name="ServiceShape/NameDecorator" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ExampleElement/Name" />
+              <DomainPropertyMoniker Name="Service/Name" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
-        <GeometryShapeMoniker Name="ExampleShape" />
+        <GeometryShapeMoniker Name="ServiceShape" />
       </ShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="Controller" />
@@ -707,6 +885,14 @@
         <ParentElementPath>
           <DomainPath>ShowFormHasGraphicElements.ShowForm/!ShowForm/MobileAppModelHasShowFormed.MobileAppModel/!MobileAppModel</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="GraphicElementShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="GraphicElement/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="GraphicElementShape" />
       </ShapeMap>
       <ShapeMap>
@@ -734,6 +920,14 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="GraphicElement/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="LabelShape/TextDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Label/Text" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -804,11 +998,34 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="AppCodeShape" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Button" />
+        <ParentElementPath>
+          <DomainPath>ShowFormHasGraphicElements.ShowForm/!ShowForm/MobileAppModelHasShowFormed.MobileAppModel/!MobileAppModel</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ButtonShape/TextDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Button/Text" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="ButtonShape" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="ExampleConnector" />
-        <DomainRelationshipMoniker Name="ExampleElementReferencesTargets" />
+        <DomainRelationshipMoniker Name="ServiceReferencesTargets" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ReferenceConnection" />
+        <DomainRelationshipMoniker Name="StateReferencesShowForm" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ReferenceConnection" />
+        <DomainRelationshipMoniker Name="ControllerReferencesStates" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -820,11 +1037,11 @@
       <XmlSerializationBehaviorMoniker Name="MobileDSLSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="MobileDSL">
-      <ElementTool Name="ExampleElement" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="ExampleElement" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
-        <DomainClassMoniker Name="ExampleElement" />
+      <ElementTool Name="Service" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Service" Tooltip="Create an ExampleElement" HelpKeyword="CreateExampleClassF1Keyword">
+        <DomainClassMoniker Name="Service" />
       </ElementTool>
       <ConnectionTool Name="ExampleRelationship" ToolboxIcon="resources\exampleconnectortoolbitmap.bmp" Caption="ExampleRelationship" Tooltip="Drag between ExampleElements to create an ExampleRelationship" HelpKeyword="ConnectExampleRelationF1Keyword">
-        <ConnectionBuilderMoniker Name="MobileDSL/ExampleElementReferencesTargetsBuilder" />
+        <ConnectionBuilderMoniker Name="MobileDSL/ServiceReferencesTargetsBuilder" />
       </ConnectionTool>
       <ElementTool Name="Controller" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Controller" Tooltip="Controller" HelpKeyword="Controller">
         <DomainClassMoniker Name="Controller" />
@@ -853,6 +1070,21 @@
       <ElementTool Name="AppCode" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="AppCode" Tooltip="App Code" HelpKeyword="AppCode">
         <DomainClassMoniker Name="AppCode" />
       </ElementTool>
+      <ConnectionTool Name="StateForm" ToolboxIcon="resources\exampleconnectortoolbitmap.bmp" Caption="StateForm" Tooltip="State Form" HelpKeyword="StateForm">
+        <ConnectionBuilderMoniker Name="MobileDSL/StateReferencesShowFormBuilder" />
+      </ConnectionTool>
+      <ElementTool Name="Button" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="Button" Tooltip="Button" HelpKeyword="Button">
+        <DomainClassMoniker Name="Button" />
+      </ElementTool>
+      <ElementTool Name="DropBox" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="DropBox" Tooltip="Drop Box" HelpKeyword="DropBox">
+        <DomainClassMoniker Name="DropBox" />
+      </ElementTool>
+      <ElementTool Name="ListBox" ToolboxIcon="resources\exampleshapetoolbitmap.bmp" Caption="ListBox" Tooltip="List Box" HelpKeyword="ListBox">
+        <DomainClassMoniker Name="ListBox" />
+      </ElementTool>
+      <ConnectionTool Name="ControllerStateReference" ToolboxIcon="resources\empty.bmp" Caption="ControllerStateReference" Tooltip="Controller State Reference" HelpKeyword="ControllerStateReference">
+        <ConnectionBuilderMoniker Name="MobileDSL/ControllerReferencesStatesBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="MobileDSLDiagram" />
