@@ -82,6 +82,7 @@ namespace Company.MobileDSL
 				typeof(Button),
 				typeof(DropBox),
 				typeof(ListBox),
+				typeof(Port),
 				typeof(MobileAppModelHasServices),
 				typeof(ServiceReferencesTargets),
 				typeof(MobileAppModelHasControllers),
@@ -94,9 +95,17 @@ namespace Company.MobileDSL
 				typeof(MobileAppModelHasAppCoded),
 				typeof(StateReferencesShowForm),
 				typeof(ControllerReferencesStates),
+				typeof(ControllerHasPorts),
+				typeof(PortReferencesTargetPort),
+				typeof(PortReferencesState),
+				typeof(StateReferencesPortFromState),
+				typeof(StateReferencesTargetStated),
+				typeof(ButtonReferencesAppCode),
 				typeof(MobileDSLDiagram),
 				typeof(ExampleConnector),
 				typeof(ReferenceConnection),
+				typeof(StateControllerConnector),
+				typeof(ConnectButtonAppCode),
 				typeof(ServiceShape),
 				typeof(ControllerShape),
 				typeof(StateShape),
@@ -109,7 +118,9 @@ namespace Company.MobileDSL
 				typeof(ServiceMsgShape),
 				typeof(AppCodeShape),
 				typeof(ButtonShape),
+				typeof(PortShape),
 				typeof(ShowFormCompartmentShape),
+				typeof(StackPanelShape),
 				typeof(global::Company.MobileDSL.FixUpDiagram),
 				typeof(global::Company.MobileDSL.ConnectorRolePlayerChanged),
 				typeof(global::Company.MobileDSL.CompartmentItemAddRule),
@@ -130,10 +141,15 @@ namespace Company.MobileDSL
 			{
 				new DomainMemberInfo(typeof(Service), "Name", Service.NameDomainPropertyId, typeof(Service.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Controller), "Name", Controller.NameDomainPropertyId, typeof(Controller.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Controller), "isStartController", Controller.isStartControllerDomainPropertyId, typeof(Controller.isStartControllerPropertyHandler)),
 				new DomainMemberInfo(typeof(State), "Name", State.NameDomainPropertyId, typeof(State.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(State), "isStartState", State.isStartStateDomainPropertyId, typeof(State.isStartStatePropertyHandler)),
 				new DomainMemberInfo(typeof(DataLink), "Name", DataLink.NameDomainPropertyId, typeof(DataLink.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(ShowForm), "Name", ShowForm.NameDomainPropertyId, typeof(ShowForm.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(ShowForm), "Background", ShowForm.BackgroundDomainPropertyId, typeof(ShowForm.BackgroundPropertyHandler)),
 				new DomainMemberInfo(typeof(GraphicElement), "Name", GraphicElement.NameDomainPropertyId, typeof(GraphicElement.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(Input), "LeftText", Input.LeftTextDomainPropertyId, typeof(Input.LeftTextPropertyHandler)),
+				new DomainMemberInfo(typeof(Input), "InputMode", Input.InputModeDomainPropertyId, typeof(Input.InputModePropertyHandler)),
 				new DomainMemberInfo(typeof(Label), "Text", Label.TextDomainPropertyId, typeof(Label.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(ServiceInvoke), "Name", ServiceInvoke.NameDomainPropertyId, typeof(ServiceInvoke.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(ServiceMsg), "Name", ServiceMsg.NameDomainPropertyId, typeof(ServiceMsg.NamePropertyHandler)),
@@ -142,6 +158,7 @@ namespace Company.MobileDSL
 				new DomainMemberInfo(typeof(Button), "Text", Button.TextDomainPropertyId, typeof(Button.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(DropBox), "Items", DropBox.ItemsDomainPropertyId, typeof(DropBox.ItemsPropertyHandler)),
 				new DomainMemberInfo(typeof(ListBox), "Items", ListBox.ItemsDomainPropertyId, typeof(ListBox.ItemsPropertyHandler)),
+				new DomainMemberInfo(typeof(Port), "Name", Port.NameDomainPropertyId, typeof(Port.NamePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -176,6 +193,18 @@ namespace Company.MobileDSL
 				new DomainRolePlayerInfo(typeof(StateReferencesShowForm), "ShowForm", StateReferencesShowForm.ShowFormDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ControllerReferencesStates), "Controller", ControllerReferencesStates.ControllerDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ControllerReferencesStates), "State", ControllerReferencesStates.StateDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ControllerHasPorts), "Controller", ControllerHasPorts.ControllerDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ControllerHasPorts), "Port", ControllerHasPorts.PortDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PortReferencesTargetPort), "SourcePort", PortReferencesTargetPort.SourcePortDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PortReferencesTargetPort), "TargetPort", PortReferencesTargetPort.TargetPortDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PortReferencesState), "Port", PortReferencesState.PortDomainRoleId),
+				new DomainRolePlayerInfo(typeof(PortReferencesState), "State", PortReferencesState.StateDomainRoleId),
+				new DomainRolePlayerInfo(typeof(StateReferencesPortFromState), "State", StateReferencesPortFromState.StateDomainRoleId),
+				new DomainRolePlayerInfo(typeof(StateReferencesPortFromState), "Port", StateReferencesPortFromState.PortDomainRoleId),
+				new DomainRolePlayerInfo(typeof(StateReferencesTargetStated), "SourceState", StateReferencesTargetStated.SourceStateDomainRoleId),
+				new DomainRolePlayerInfo(typeof(StateReferencesTargetStated), "TargetState", StateReferencesTargetStated.TargetStateDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ButtonReferencesAppCode), "Button", ButtonReferencesAppCode.ButtonDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ButtonReferencesAppCode), "AppCode", ButtonReferencesAppCode.AppCodeDomainRoleId),
 			};
 		}
 		#endregion
@@ -197,7 +226,7 @@ namespace Company.MobileDSL
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(31);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(36);
 				createElementMap.Add(typeof(MobileAppModel), 0);
 				createElementMap.Add(typeof(Service), 1);
 				createElementMap.Add(typeof(Controller), 2);
@@ -213,22 +242,27 @@ namespace Company.MobileDSL
 				createElementMap.Add(typeof(Button), 12);
 				createElementMap.Add(typeof(DropBox), 13);
 				createElementMap.Add(typeof(ListBox), 14);
-				createElementMap.Add(typeof(MobileDSLDiagram), 15);
-				createElementMap.Add(typeof(ExampleConnector), 16);
-				createElementMap.Add(typeof(ReferenceConnection), 17);
-				createElementMap.Add(typeof(ServiceShape), 18);
-				createElementMap.Add(typeof(ControllerShape), 19);
-				createElementMap.Add(typeof(StateShape), 20);
-				createElementMap.Add(typeof(DataLinkShape), 21);
-				createElementMap.Add(typeof(ShowFormShape), 22);
-				createElementMap.Add(typeof(GraphicElementShape), 23);
-				createElementMap.Add(typeof(InputShape), 24);
-				createElementMap.Add(typeof(LabelShape), 25);
-				createElementMap.Add(typeof(ServiceInvokeShape), 26);
-				createElementMap.Add(typeof(ServiceMsgShape), 27);
-				createElementMap.Add(typeof(AppCodeShape), 28);
-				createElementMap.Add(typeof(ButtonShape), 29);
-				createElementMap.Add(typeof(ShowFormCompartmentShape), 30);
+				createElementMap.Add(typeof(Port), 15);
+				createElementMap.Add(typeof(MobileDSLDiagram), 16);
+				createElementMap.Add(typeof(ExampleConnector), 17);
+				createElementMap.Add(typeof(ReferenceConnection), 18);
+				createElementMap.Add(typeof(StateControllerConnector), 19);
+				createElementMap.Add(typeof(ConnectButtonAppCode), 20);
+				createElementMap.Add(typeof(ServiceShape), 21);
+				createElementMap.Add(typeof(ControllerShape), 22);
+				createElementMap.Add(typeof(StateShape), 23);
+				createElementMap.Add(typeof(DataLinkShape), 24);
+				createElementMap.Add(typeof(ShowFormShape), 25);
+				createElementMap.Add(typeof(GraphicElementShape), 26);
+				createElementMap.Add(typeof(InputShape), 27);
+				createElementMap.Add(typeof(LabelShape), 28);
+				createElementMap.Add(typeof(ServiceInvokeShape), 29);
+				createElementMap.Add(typeof(ServiceMsgShape), 30);
+				createElementMap.Add(typeof(AppCodeShape), 31);
+				createElementMap.Add(typeof(ButtonShape), 32);
+				createElementMap.Add(typeof(PortShape), 33);
+				createElementMap.Add(typeof(ShowFormCompartmentShape), 34);
+				createElementMap.Add(typeof(StackPanelShape), 35);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -257,22 +291,27 @@ namespace Company.MobileDSL
 				case 12: return new Button(partition, propertyAssignments);
 				case 13: return new DropBox(partition, propertyAssignments);
 				case 14: return new ListBox(partition, propertyAssignments);
-				case 15: return new MobileDSLDiagram(partition, propertyAssignments);
-				case 16: return new ExampleConnector(partition, propertyAssignments);
-				case 17: return new ReferenceConnection(partition, propertyAssignments);
-				case 18: return new ServiceShape(partition, propertyAssignments);
-				case 19: return new ControllerShape(partition, propertyAssignments);
-				case 20: return new StateShape(partition, propertyAssignments);
-				case 21: return new DataLinkShape(partition, propertyAssignments);
-				case 22: return new ShowFormShape(partition, propertyAssignments);
-				case 23: return new GraphicElementShape(partition, propertyAssignments);
-				case 24: return new InputShape(partition, propertyAssignments);
-				case 25: return new LabelShape(partition, propertyAssignments);
-				case 26: return new ServiceInvokeShape(partition, propertyAssignments);
-				case 27: return new ServiceMsgShape(partition, propertyAssignments);
-				case 28: return new AppCodeShape(partition, propertyAssignments);
-				case 29: return new ButtonShape(partition, propertyAssignments);
-				case 30: return new ShowFormCompartmentShape(partition, propertyAssignments);
+				case 15: return new Port(partition, propertyAssignments);
+				case 16: return new MobileDSLDiagram(partition, propertyAssignments);
+				case 17: return new ExampleConnector(partition, propertyAssignments);
+				case 18: return new ReferenceConnection(partition, propertyAssignments);
+				case 19: return new StateControllerConnector(partition, propertyAssignments);
+				case 20: return new ConnectButtonAppCode(partition, propertyAssignments);
+				case 21: return new ServiceShape(partition, propertyAssignments);
+				case 22: return new ControllerShape(partition, propertyAssignments);
+				case 23: return new StateShape(partition, propertyAssignments);
+				case 24: return new DataLinkShape(partition, propertyAssignments);
+				case 25: return new ShowFormShape(partition, propertyAssignments);
+				case 26: return new GraphicElementShape(partition, propertyAssignments);
+				case 27: return new InputShape(partition, propertyAssignments);
+				case 28: return new LabelShape(partition, propertyAssignments);
+				case 29: return new ServiceInvokeShape(partition, propertyAssignments);
+				case 30: return new ServiceMsgShape(partition, propertyAssignments);
+				case 31: return new AppCodeShape(partition, propertyAssignments);
+				case 32: return new ButtonShape(partition, propertyAssignments);
+				case 33: return new PortShape(partition, propertyAssignments);
+				case 34: return new ShowFormCompartmentShape(partition, propertyAssignments);
+				case 35: return new StackPanelShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -295,7 +334,7 @@ namespace Company.MobileDSL
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
 				createElementLinkMap.Add(typeof(MobileAppModelHasServices), 0);
 				createElementLinkMap.Add(typeof(ServiceReferencesTargets), 1);
 				createElementLinkMap.Add(typeof(MobileAppModelHasControllers), 2);
@@ -308,6 +347,12 @@ namespace Company.MobileDSL
 				createElementLinkMap.Add(typeof(MobileAppModelHasAppCoded), 9);
 				createElementLinkMap.Add(typeof(StateReferencesShowForm), 10);
 				createElementLinkMap.Add(typeof(ControllerReferencesStates), 11);
+				createElementLinkMap.Add(typeof(ControllerHasPorts), 12);
+				createElementLinkMap.Add(typeof(PortReferencesTargetPort), 13);
+				createElementLinkMap.Add(typeof(PortReferencesState), 14);
+				createElementLinkMap.Add(typeof(StateReferencesPortFromState), 15);
+				createElementLinkMap.Add(typeof(StateReferencesTargetStated), 16);
+				createElementLinkMap.Add(typeof(ButtonReferencesAppCode), 17);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -334,6 +379,12 @@ namespace Company.MobileDSL
 				case 9: return new MobileAppModelHasAppCoded(partition, roleAssignments, propertyAssignments);
 				case 10: return new StateReferencesShowForm(partition, roleAssignments, propertyAssignments);
 				case 11: return new ControllerReferencesStates(partition, roleAssignments, propertyAssignments);
+				case 12: return new ControllerHasPorts(partition, roleAssignments, propertyAssignments);
+				case 13: return new PortReferencesTargetPort(partition, roleAssignments, propertyAssignments);
+				case 14: return new PortReferencesState(partition, roleAssignments, propertyAssignments);
+				case 15: return new StateReferencesPortFromState(partition, roleAssignments, propertyAssignments);
+				case 16: return new StateReferencesTargetStated(partition, roleAssignments, propertyAssignments);
+				case 17: return new ButtonReferencesAppCode(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -521,6 +572,7 @@ namespace Company.MobileDSL
 			DomainRoles.Add(global::Company.MobileDSL.MobileAppModelHasServiceInvoked.ServiceInvokeDomainRoleId, true);
 			DomainRoles.Add(global::Company.MobileDSL.MobileAppModelHasServiceMsg.ServiceMsgDomainRoleId, true);
 			DomainRoles.Add(global::Company.MobileDSL.MobileAppModelHasAppCoded.AppCodeDomainRoleId, true);
+			DomainRoles.Add(global::Company.MobileDSL.ControllerHasPorts.PortDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

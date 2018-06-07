@@ -59,6 +59,34 @@ namespace Company.MobileDSL
 		/// Toolbox item filter string used to identify ControllerStateReference connector tool.
 		/// </summary>
 		public const string ControllerStateReferenceFilterString = "ControllerStateReference.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify SwitchState connector tool.
+		/// </summary>
+		public const string SwitchStateFilterString = "SwitchState.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify SwitchPort connector tool.
+		/// </summary>
+		public const string SwitchPortFilterString = "SwitchPort.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify PortStateConnect connector tool.
+		/// </summary>
+		public const string PortStateConnectFilterString = "PortStateConnect.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify StatePortConnect connector tool.
+		/// </summary>
+		public const string StatePortConnectFilterString = "StatePortConnect.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify StateConnector connector tool.
+		/// </summary>
+		public const string StateConnectorFilterString = "StateConnector.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify SwState connector tool.
+		/// </summary>
+		public const string SwStateFilterString = "SwState.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify ConnectionTool1 connector tool.
+		/// </summary>
+		public const string ConnectionTool1FilterString = "ConnectionTool1.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -106,7 +134,7 @@ namespace Company.MobileDSL
 		{
 			get
 			{
-				return 16;
+				return 20;
 			}
 		}
 		
@@ -285,43 +313,11 @@ namespace Company.MobileDSL
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Company.MobileDSL.ServiceInvokeToolboxItem":
-					// Add ServiceInvoke shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.MobileDSL.ServiceInvokeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						9, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ServiceInvokeToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ServiceInvokeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ServiceInvoke", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ServiceInvokeToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.MobileDSL.ServiceInvoke.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "Company.MobileDSL.ServiceMsgToolboxItem":
-					// Add ServiceMsg shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"Company.MobileDSL.ServiceMsgToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						10, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ServiceMsgToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ServiceMsgToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ServiceMsg", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ServiceMsgToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.MobileDSL.ServiceMsg.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
 				case "Company.MobileDSL.AppCodeToolboxItem":
 					// Add AppCode shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.MobileDSL.AppCodeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						11, // Position relative to other items in the same toolbox tab.
+						9, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("AppCodeToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AppCodeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -338,7 +334,7 @@ namespace Company.MobileDSL
 					// Add StateForm connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.MobileDSL.StateFormToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						12, // Position relative to other items in the same toolbox tab.
+						10, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("StateFormToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("StateFormToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -355,7 +351,7 @@ namespace Company.MobileDSL
 					// Add Button shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.MobileDSL.ButtonToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						13, // Position relative to other items in the same toolbox tab.
+						11, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ButtonToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ButtonToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -371,7 +367,7 @@ namespace Company.MobileDSL
 					// Add DropBox shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.MobileDSL.DropBoxToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						14, // Position relative to other items in the same toolbox tab.
+						12, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("DropBoxToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("DropBoxToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -387,7 +383,7 @@ namespace Company.MobileDSL
 					// Add ListBox shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.MobileDSL.ListBoxToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						15, // Position relative to other items in the same toolbox tab.
+						13, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ListBoxToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ListBoxToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -404,7 +400,7 @@ namespace Company.MobileDSL
 					// Add ControllerStateReference connector tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"Company.MobileDSL.ControllerStateReferenceToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						16, // Position relative to other items in the same toolbox tab.
+						14, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ControllerStateReferenceToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ControllerStateReferenceToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
 						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -415,6 +411,148 @@ namespace Company.MobileDSL
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ControllerStateReferenceFilterString)
+						});
+					break;
+				case "Company.MobileDSL.SwitchStateToolboxItem":
+
+					// Add SwitchState connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.SwitchStateToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						15, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("SwitchStateToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SwitchStateToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"SwitchState", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("SwitchStateToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(SwitchStateFilterString)
+						});
+					break;
+				case "Company.MobileDSL.PortToolboxItem":
+					// Add Port shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.PortToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						16, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("PortToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("PortToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Port", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("PortToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MobileDSL.Port.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.MobileDSL.SwitchPortToolboxItem":
+
+					// Add SwitchPort connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.SwitchPortToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						17, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("SwitchPortToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SwitchPortToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"SwitchPort", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("SwitchPortToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(SwitchPortFilterString)
+						});
+					break;
+				case "Company.MobileDSL.PortStateConnectToolboxItem":
+
+					// Add PortStateConnect connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.PortStateConnectToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						18, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("PortStateConnectToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("PortStateConnectToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"PortStateConnect", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("PortStateConnectToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(PortStateConnectFilterString)
+						});
+					break;
+				case "Company.MobileDSL.StatePortConnectToolboxItem":
+
+					// Add StatePortConnect connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.StatePortConnectToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						19, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("StatePortConnectToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("StatePortConnectToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"StatePortConnect", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("StatePortConnectToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(StatePortConnectFilterString)
+						});
+					break;
+				case "Company.MobileDSL.StateConnectorToolboxItem":
+
+					// Add StateConnector connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.StateConnectorToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						20, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("StateConnectorToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("StateConnectorToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSLToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSLToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"StateConnector", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("StateConnectorToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(StateConnectorFilterString)
+						});
+					break;
+				case "Company.MobileDSL.SwStateToolboxItem":
+
+					// Add SwState connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.SwStateToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						1, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("SwStateToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SwStateToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSL2ToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSL2ToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"SwState", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("SwStateToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(SwStateFilterString)
+						});
+					break;
+				case "Company.MobileDSL.ConnectionTool1ToolboxItem":
+
+					// Add ConnectionTool1 connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MobileDSL.ConnectionTool1ToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						2, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ConnectionTool1ToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ConnectionTool1ToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"Company.MobileDSL.MobileDSL2ToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MobileDSL2ToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ConnectionTool1", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ConnectionTool1ToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ConnectionTool1FilterString)
 						});
 					break;
 				default:

@@ -20,10 +20,8 @@ namespace Application0{
 
 	public class LoginController  : Controller{
 
-Input VolunteerIdInput;
-Label PasswordLabel;
-Label VolunteerIdLabel;
-Input PasswordInput;
+StackPanel volunteerIdInput;
+StackPanel passwordInput;
 Button loginButton;
         private static LoginController instance;
         private LoginController(Application0 app) : base(app)
@@ -41,11 +39,34 @@ Button loginButton;
         {
                     LoginState,
                 }
+        private LoginControllerState controllerState = LoginControllerState.LoginState;
 
-         public override void action(){}
+         public override void action(){          
+                 switch(controllerState){
+ 
+case LoginControllerState.LoginState: 
+showLoginState();
+ 
+if(false ){this.app.currentController = MainController.getInstance(this.app);
+this.app.changed = true;
+}
+ 
+
+break;
+}
+
+}
          
 private void showLoginState(){
-VolunteerIdInput = new Input{
+var volunteerIdInputLeft = new TextBlock{
+                VerticalAlignment = VerticalAlignment.Center, 
+                HorizontalAlignment = HorizontalAlignment.Center, 
+                WrapContent = true, 
+                Font = new Font(new FontFamily("Arial"), 16),
+                Foreground = new SolidColorBrush(Colors.Black),
+                Text = "Volunteer Id"
+};
+var volunteerIdInputRight = new Input{
     VerticalAlignment = VerticalAlignment.Center, 
     HorizontalAlignment = HorizontalAlignment.Center, 
     Background = new SolidColorBrush(Colors.White), 
@@ -56,24 +77,18 @@ VolunteerIdInput = new Input{
     Font = new Font(new FontFamily("Arial"), 12),
     InputMode = Ubiq.Graphics.InputMode.Text,
     Text = ""
-            }; 
-PasswordLabel = new TextBlock{
+            };
+volunteerIdInput = new StackPanel{ Children = {new Cell{Content = volunteerIdInputLeft}, new Cell{Content = volunteerIdInputRight},}, Orientation = Orientation.Horizontal};
+ 
+var passwordInputLeft = new TextBlock{
                 VerticalAlignment = VerticalAlignment.Center, 
                 HorizontalAlignment = HorizontalAlignment.Center, 
                 WrapContent = true, 
                 Font = new Font(new FontFamily("Arial"), 16),
                 Foreground = new SolidColorBrush(Colors.Black),
                 Text = "Password"
-}; 
-VolunteerIdLabel = new TextBlock{
-                VerticalAlignment = VerticalAlignment.Center, 
-                HorizontalAlignment = HorizontalAlignment.Center, 
-                WrapContent = true, 
-                Font = new Font(new FontFamily("Arial"), 16),
-                Foreground = new SolidColorBrush(Colors.Black),
-                Text = ""
-}; 
-PasswordInput = new Input{
+};
+var passwordInputRight = new Input{
     VerticalAlignment = VerticalAlignment.Center, 
     HorizontalAlignment = HorizontalAlignment.Center, 
     Background = new SolidColorBrush(Colors.White), 
@@ -82,9 +97,11 @@ PasswordInput = new Input{
     WrapContent = true,
     Width = 150,
     Font = new Font(new FontFamily("Arial"), 12),
-    InputMode = Ubiq.Graphics.InputMode.Text,
+    InputMode = Ubiq.Graphics.InputMode.SecureText,
     Text = ""
-            }; 
+            };
+passwordInput = new StackPanel{ Children = {new Cell{Content = passwordInputLeft}, new Cell{Content = passwordInputRight},}, Orientation = Orientation.Horizontal};
+ 
 loginButton = new Button{
     VerticalAlignment = VerticalAlignment.Center, 
     HorizontalAlignment = HorizontalAlignment.Center, 
@@ -93,9 +110,16 @@ loginButton = new Button{
     Padding = new Thickness(Screen.NormalFontSize), 
     WrapContent = true, 
     Font = new Font(new FontFamily("Arial"), 0.5 * Screen.LargeFontSize), 
-    Text = "LoginButton"
+    Text = "Log in"
 }; 
-var panel = new StackPanel{};
+var panel = new StackPanel{
+Children = {new Cell{ Content = volunteerIdInput},
+new Cell{ Content = passwordInput},
+new Cell{ Content = loginButton},
+},
+Background = new SolidColorBrush(Colors.LightBlue),
+
+};
 Screen.Content = panel;
 }
     }
@@ -103,8 +127,8 @@ Screen.Content = panel;
 
 Button checkinButton;
 Button LogoutButton;
-Label generatedKeyLabel;
-Label KeyLabel;
+TextBlock generatedKeyLabel;
+TextBlock KeyLabel;
 Button BackButton;
         private static MainController instance;
         private MainController(Application0 app) : base(app)
@@ -123,8 +147,37 @@ Button BackButton;
                     StartState,
                     CheckinState,
                 }
+        private MainControllerState controllerState = MainControllerState.StartState;
 
-         public override void action(){}
+         public override void action(){          
+                 switch(controllerState){
+ 
+case MainControllerState.StartState: 
+showStartState();
+ 
+if(false ){this.app.currentController = LoginController.getInstance(this.app);
+this.app.changed = true;
+}
+ 
+
+ 
+if(false){controllerState = MainControllerState.CheckinState;
+this.app.changed = true;
+}
+break;
+ 
+case MainControllerState.CheckinState: 
+showCheckinState();
+ 
+
+ 
+if(false){controllerState = MainControllerState.StartState;
+this.app.changed = true;
+}
+break;
+}
+
+}
          
 private void showStartState(){
 checkinButton = new Button{
@@ -147,7 +200,13 @@ LogoutButton = new Button{
     Font = new Font(new FontFamily("Arial"), 0.5 * Screen.LargeFontSize), 
     Text = "Log Out"
 }; 
-var panel = new StackPanel{};
+var panel = new StackPanel{
+Children = {new Cell{ Content = checkinButton},
+new Cell{ Content = LogoutButton},
+},
+Background = new SolidColorBrush(Colors.LightBlue),
+
+};
 Screen.Content = panel;
 }
  
@@ -178,7 +237,14 @@ BackButton = new Button{
     Font = new Font(new FontFamily("Arial"), 0.5 * Screen.LargeFontSize), 
     Text = "Back"
 }; 
-var panel = new StackPanel{};
+var panel = new StackPanel{
+Children = {new Cell{ Content = generatedKeyLabel},
+new Cell{ Content = KeyLabel},
+new Cell{ Content = BackButton},
+},
+Background = new SolidColorBrush(Colors.LightBlue),
+
+};
 Screen.Content = panel;
 }
     }

@@ -49,12 +49,20 @@ namespace Application0{
             <#= state.Name #>,
         <# }#>
         }
+        private <#=controller.Name#>State controllerState = <#=controller.Name#>State.<#getMainState(controller);#>;
 
-         public override void action(){}
+         public override void action(){          
+                 <#makeSwitchStatement(controller);#>
+
+}
         <#makeShowFunctions(controller);#>
     }
 <# } #>
 }
+<#+  //=======================================================  
+private void getMainState(Controller controller)  
+{foreach (State state in controller.States)
+        {if(state.isStartState){#><#=state.Name#><#+}}}#>
 <#+  //=======================================================  
 private void getPrimitivesFromController(Controller controller)  
 {  
@@ -62,6 +70,37 @@ private void getPrimitivesFromController(Controller controller)
         {#>
 <#+getPrimitivesFromForm(state.ShowForm);#>
 <#+}}#>
+<#+  //=======================================================  
+private void makeSwitchStatement(Controller controller)  
+{#>
+switch(controllerState){
+<#+  
+	foreach (State state in controller.States)
+        {#> 
+case <#=controller.Name#>State.<#=state.Name#>: 
+show<#=state.Name#>();
+<#+switchController(state);#>
+break;
+<#+}#>
+}
+<#+}#>
+<#+  //=======================================================  
+private void switchController(State state)  
+    {  
+        if(state.PortFromState!=null){
+#> 
+if(false ){this.app.currentController = <#=state.PortFromState.TargetPort.Controller.Name#>.getInstance(this.app);
+this.app.changed = true;
+}
+<#+}#> 
+
+<#+foreach (State refState in state.TargetStated)
+        {#> 
+if(false){controllerState = <#=state.Controller.Name#>State.<#=refState.Name#>;
+this.app.changed = true;
+}
+<#+}#>
+<#+}#>
 
 <#+  //=======================================================  
 private void makeShowFunctions(Controller controller)  
@@ -74,7 +113,11 @@ private void makeShowFunctions(Controller controller)
 private void showState(State state)  
 { #>private void show<#=state.Name#>(){
 <#+getPrimitiveConstructorsFromForm(state.ShowForm);#>
-var panel = new StackPanel{};
+var panel = new StackPanel{
+Children = {<#+getCellsFromForm(state.ShowForm);#>},
+Background = new SolidColorBrush(Colors.<#=state.ShowForm.Background#>),
+
+};
 Screen.Content = panel;
 }
 <#+}#>
@@ -90,6 +133,12 @@ private void getPrimitiveConstructorsFromForm(ShowForm form)
 {  
 	foreach (GraphicElement element in form.GraphicElements){#>
 <#+constructorOf(element);#> 
+<#+}}#>
+<#+  //=======================================================
+private void getCellsFromForm(ShowForm form)  
+{  
+	foreach (GraphicElement element in form.GraphicElements){#>
+new Cell{ Content = <#=element.Name#>},
 <#+}}#>
 <#+  //=======================================================  
 private void constructorOf(GraphicElement element)  
@@ -115,7 +164,17 @@ private void constructorOf(GraphicElement element)
 };<#+}#>
 
 
-<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {#><#=element.Name#> = new Input{
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {
+#>
+var <#=element.Name#>Left = new TextBlock{
+                VerticalAlignment = VerticalAlignment.Center, 
+                HorizontalAlignment = HorizontalAlignment.Center, 
+                WrapContent = true, 
+                Font = new Font(new FontFamily("Arial"), 16),
+                Foreground = new SolidColorBrush(Colors.Black),
+                Text = "<#=((Company.MobileDSL.Input)element).LeftText#>"
+};
+var <#=element.Name#>Right = new Input{
     VerticalAlignment = VerticalAlignment.Center, 
     HorizontalAlignment = HorizontalAlignment.Center, 
     Background = new SolidColorBrush(Colors.White), 
@@ -124,16 +183,19 @@ private void constructorOf(GraphicElement element)
     WrapContent = true,
     Width = 150,
     Font = new Font(new FontFamily("Arial"), 12),
-    InputMode = Ubiq.Graphics.InputMode.Text,
+    InputMode = Ubiq.Graphics.InputMode.<#=((Company.MobileDSL.Input)element).InputMode#>,
     Text = ""
-            };<#+}#>
+            };
+<#=element.Name#> = new StackPanel{ Children = {new Cell{Content = <#=element.Name#>Left}, new Cell{Content = <#=element.Name#>Right},}, Orientation = Orientation.Horizontal};
+<#+}#>
+
 <#+}#>
 <#+  //=======================================================  
 private void typeOf(GraphicElement element)  
 {  #>
 <#+ if(element.GetType() == typeof(Company.MobileDSL.Button)) {#>Button<#+}#>
-<#+ if(element.GetType() == typeof(Company.MobileDSL.Label)) {#>Label<#+}#>
-<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {#>Input<#+}#>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Label)) {#>TextBlock<#+}#>
+<#+ if(element.GetType() == typeof(Company.MobileDSL.Input)) {#>StackPanel<#+}#>
 <#+}#>
 
 
